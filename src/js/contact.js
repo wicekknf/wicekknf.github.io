@@ -12,8 +12,6 @@ const sendBtn = document.querySelector(".send");
 const clearBtn = document.querySelector(".clear");
 const closeBtn = document.querySelector(".close");
 
-console.log(textArea);
-
 const currentYear = new Date().getFullYear();
 year.textContent = currentYear;
 
@@ -32,6 +30,13 @@ const hideNav = () => {
 miniNavItems.forEach((e) => {
 	e.addEventListener("click", hideNav);
 });
+
+const cleanFormFnc = () => {
+	[nameInput, emailInput, textArea].forEach((el) => {
+		el.value = "";
+		el.parentElement.classList.remove("error");
+	});
+};
 
 // Implementacja ScrollSpy
 document.addEventListener("DOMContentLoaded", function () {
@@ -62,8 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener("scroll", updateActiveLink);
 });
 
-// czyszczenie formularza
-
 const showError = (elementIn, msg) => {
 	elementIn.parentElement.classList.add("error");
 	elementIn.nextElementSibling.textContent = msg;
@@ -76,18 +79,13 @@ const hideError = (elementIn) => {
 clearBtn.addEventListener("click", (e) => {
 	e.preventDefault();
 
-	[nameInput, emailInput, textArea].forEach((el) => {
-		el.value = "";
-		el.parentElement.classList.remove("error");
-	});
+	cleanFormFnc();
 });
 
 // sprawdzanie formularza
 
 const checkNameLenght = (input, length) => {
-	console.log(input);
 	if (input.value.length < length) {
-		console.log("nok");
 		showError(input, "Imię jest za krótkie");
 	} else {
 		hideError(input);
@@ -110,7 +108,7 @@ const checkInput = (elementIn) => {
 		} else {
 			hideError(el);
 			checkNameLenght(nameInput, 3);
-            checkEmail(emailInput);
+			checkEmail(emailInput);
 		}
 	});
 };
@@ -126,12 +124,36 @@ const checkEmail = (email) => {
 	}
 };
 
+// wysyłanie formularza
+
+const checkErrors = () => {
+	let currentErrors = 0;
+
+	const formBoxes = document.querySelectorAll(".form-box");
+
+	formBoxes.forEach((el) => {
+		if (el.classList.contains("error")) {
+			currentErrors++;
+		}
+		console.log(currentErrors);
+
+		if (currentErrors === 0) {
+			popup.classList.add("show-popup");
+		}
+	});
+};
+
 sendBtn.addEventListener("click", (e) => {
 	e.preventDefault();
 
 	checkTextarea(textArea);
 	checkInput([nameInput, emailInput]);
+	checkErrors();
 });
-
+closeBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+	popup.classList.remove("show-popup");
+	cleanFormFnc();
+});
 miniHamburger.addEventListener("click", showNav);
 miniClose.addEventListener("click", hideNav);

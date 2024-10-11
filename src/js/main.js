@@ -12,8 +12,6 @@ const sendBtn = document.querySelector(".send");
 const clearBtn = document.querySelector(".clear");
 const closeBtn = document.querySelector(".close");
 
-console.log(textArea);
-
 const currentYear = new Date().getFullYear();
 year.textContent = currentYear;
 

@@ -199,6 +199,7 @@ nav {
 }
 
 .hero-text {
+	margin-right: 0.5em;
 	position: absolute;
 	top: 50%;
 	left: 1em;
@@ -206,9 +207,13 @@ nav {
 	font-size: 1.5rem;
 	color: #d5d3d3;
 }
-.hero-text h1 {
-	font-size: 3.5rem;
+.hero-text p {
+	font-size: 2.5rem;
 	margin-bottom: 0.2em;
+}
+
+.hero-text h1 {
+	font-size: 3rem;
 }
 
 @media (width > 576px) {
@@ -224,6 +229,9 @@ nav {
 	.hero-text h1 {
 		font-size: 4.5rem;
 	}
+	.hero-text p {
+		font-size: 3.8rem;
+	}
 }
 
 @media (width > 768px) {
@@ -233,6 +241,9 @@ nav {
 	}
 	.hero-text h1 {
 		font-size: 5.5rem;
+	}
+	.hero-text p {
+		font-size: 4.5rem;
 	}
 }
 
@@ -246,6 +257,9 @@ nav {
 	}
 	.hero-text h1 {
 		font-size: 6rem;
+	}
+	.hero-text p {
+		font-size: 5.1rem;
 	}
 
 	.nav-list {
@@ -551,10 +565,13 @@ nav {
 		a {
 			text-decoration: none;
 			padding: 1em 1.8em;
-			outline: none;
+			outline: none;	
 		}
 		a:focus {
 			color: #fff;
+		}
+		a:visited {
+			color: inherit;
 		}
 	}
 	button:focus-within {
@@ -860,6 +877,10 @@ footer {
 		margin-bottom: 1em;
 		color: #fff;
 	}
+}
+
+.show-popup {
+	visibility: visible;
 }
 
 .line {
