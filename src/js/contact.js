@@ -62,5 +62,76 @@ document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener("scroll", updateActiveLink);
 });
 
+// czyszczenie formularza
+
+const showError = (elementIn, msg) => {
+	elementIn.parentElement.classList.add("error");
+	elementIn.nextElementSibling.textContent = msg;
+};
+
+const hideError = (elementIn) => {
+	elementIn.parentElement.classList.remove("error");
+};
+
+clearBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+
+	[nameInput, emailInput, textArea].forEach((el) => {
+		el.value = "";
+		el.parentElement.classList.remove("error");
+	});
+});
+
+// sprawdzanie formularza
+
+const checkNameLenght = (input, length) => {
+	console.log(input);
+	if (input.value.length < length) {
+		console.log("nok");
+		showError(input, "Imię jest za krótkie");
+	} else {
+		hideError(input);
+	}
+};
+
+const checkTextarea = (elementIn) => {
+	if (elementIn.value === "") {
+		elementIn.parentElement.classList.add("error");
+		elementIn.nextElementSibling.textContent = "wiadomość jest pusta";
+	} else {
+		hideError(elementIn);
+	}
+};
+
+const checkInput = (elementIn) => {
+	elementIn.forEach((el) => {
+		if (el.value === "") {
+			showError(el, el.placeholder);
+		} else {
+			hideError(el);
+			checkNameLenght(nameInput, 3);
+            checkEmail(emailInput);
+		}
+	});
+};
+
+const checkEmail = (email) => {
+	const re =
+		/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+	if (re.test(email.value)) {
+		hideError(email);
+	} else {
+		showError(email, "nie prawidłowy adres email");
+	}
+};
+
+sendBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+
+	checkTextarea(textArea);
+	checkInput([nameInput, emailInput]);
+});
+
 miniHamburger.addEventListener("click", showNav);
 miniClose.addEventListener("click", hideNav);
