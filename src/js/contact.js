@@ -136,11 +136,10 @@ const checkErrors = () => {
 			currentErrors++;
 		}
 		console.log(currentErrors);
-
-		if (currentErrors === 0) {
-			popup.classList.add("show-popup");
-		}
 	});
+	if (currentErrors === 0) {
+		popup.classList.add("show-popup");
+	}
 };
 
 sendBtn.addEventListener("click", (e) => {
