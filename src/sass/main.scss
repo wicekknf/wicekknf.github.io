@@ -227,6 +227,54 @@ nav {
 	);
 }
 
+// HERO2
+
+.hero2 {
+	margin-top: 2em;
+	position: relative;
+	width: 100%;
+	height: 200px;
+}
+.img-hero2 {
+	height: 100%;
+	width: 100%;
+	background-image: url("/dist/img/HeroImage2Small.JPG");
+	background-size: cover;
+	// background-position: center;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.shadow-hero2,
+.gradient-hero2,
+.text-hero2 {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.shadow-hero2 {
+	background-color: rgba(255, 37, 91, 0.22);
+}
+
+.gradient-hero2 {
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 0) 50%,
+		rgba(255, 255, 255, 1) 100%
+	);
+}
+
+.text-hero2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 // FOOTER
 
 .footer-top,
@@ -304,6 +352,10 @@ nav {
 	text-transform: uppercase;
 	color: color.$main-text;
 	padding: 0.5em;
+}
+.footer-links a:active {
+	color: #fff;
+	background-color: none;
 }
 
 .footer-hours {
