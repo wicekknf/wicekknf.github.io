@@ -11,15 +11,37 @@ const currentYear = new Date().getFullYear();
 
 year.textContent = currentYear;
 
-const showMiniNav = () => {
+// Function for show mini nav
+const showMinNav = () => {
+	barsX.classList.add("active-bars-x");
+	navBottom.classList.add("show-miniNav");
+};
+
+// Function for hide mini nav
+const hideMiniVav = () => {
+	barsX.classList.remove("active-bars-x");
+	navBottom.classList.remove("show-miniNav");
+};
+
+// Managing hide and show mini nav by bars
+const handleMiniNav = () => {
 	bars.classList.toggle("hide-bars");
 	if (bars.classList.contains("hide-bars")) {
-		barsX.classList.add("active-bars-x");
-		navBottom.classList.add("show-miniNav");
+		showMinNav();
 	} else {
-		barsX.classList.remove("active-bars-x");
-		navBottom.classList.remove("show-miniNav");
+		hideMiniVav();
 	}
 };
 
-burgerBtn.addEventListener("click", showMiniNav);
+// Managing show and hide mini nav by links
+const handleLinksNav = () => {
+	navBottomLinks.forEach((e) =>
+		e.addEventListener("click", function hideMiniVavByLink() {
+			hideMiniVav();
+			bars.classList.remove("hide-bars");
+		})
+	);
+};
+
+handleLinksNav();
+burgerBtn.addEventListener("click", handleMiniNav);

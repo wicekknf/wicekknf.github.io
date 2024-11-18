@@ -35,13 +35,26 @@ body {
 	);
 }
 
-// .title-section {
-// 	text-transform: uppercase;
-// 	margin-bottom: 25px;
-// 	text-align: center;
-// 	font-size: 3rem;
-// 	letter-spacing: 5px;
-// }
+.title-section {
+	display: inline-block;
+	position: relative;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+	text-align: center;
+	// font-size: 3rem;
+	letter-spacing: 4px;
+	color: color.$main-text;
+}
+
+.title-section::after {
+	position: absolute;
+	bottom: -0.3em;
+	left: -30%;
+	width: 160%;
+	height: 1px;
+	content: "";
+	background-color: color.$main-text;
+}
 
 // h3 {
 // 	text-transform: uppercase;
@@ -66,6 +79,7 @@ nav {
 	width: 100%;
 	height: 70px;
 	@include main-gradient;
+	z-index: 10;
 }
 
 .navigation,
@@ -196,8 +210,8 @@ nav {
 .hero1 {
 	position: relative;
 	margin-top: 70px;
-	width: 100%;
-	z-index: -10;
+	// width: 100%;
+	// height: 100%;
 }
 
 .hero1 {
@@ -230,17 +244,16 @@ nav {
 // HERO2
 
 .hero2 {
-	margin-top: 2em;
+	margin: 8em 0;
 	position: relative;
 	width: 100%;
 	height: 70vw;
 	max-height: 240px;
-	z-index: -10;
 }
 .img-hero2 {
 	height: 100%;
 	width: 100%;
-	background-image: url("/dist/img/HeroImage2Small.JPG");
+	background-image: url("../../dist/img/HeroImage2Small.JPG");
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -248,8 +261,7 @@ nav {
 }
 
 .shadow-hero2,
-.gradient-hero2,
-.text-hero2 {
+.gradient-hero2 {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -271,27 +283,61 @@ nav {
 }
 
 .text-hero2 {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	// display: flex;
+	position: absolute;
+	// height: 100%;
+	width: 90%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	// justify-content: center;
+	// align-items: center;
 	padding: 1em;
-	z-index: 10;
 }
 .text-hero2 h1 {
 	// padding: 1em;
-	// text-transform: uppercase;
+	text-transform: uppercase;
 	// letter-spacing: 1px;
-	font-size: 2rem;
+	font-size: 1.7rem;
 	color: #fff;
 }
-.text-hero2 p {
-	color: black;
-	font-size: 1.7rem;
-	letter-spacing: 2px;
-	// display: inline-block;
+
+// ABOUT ME
+
+.about-me {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-.text-hero2 p span {
-	color: rgb(96, 10, 94);
+
+.about-me-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 700px;
+	width: 80%;
+	padding: 2em;
+	background-color: color.$background;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+.about-me-picture {
+	height: 90vw;
+	width: 70vw;
+	max-width: 80%;
+	margin-top: 3em;
+	background-image: url("../../dist/img/Właścicielka.jpeg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 15px;
+}
+
+.about-me-text {
+	padding: 2em 3em;
+	line-height: 1.5em;
+	font-size: 1.3rem;
 }
 
 // FOOTER
