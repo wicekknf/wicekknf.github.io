@@ -39,34 +39,39 @@ body {
 	display: inline-block;
 	position: relative;
 	text-transform: uppercase;
-	margin-bottom: 25px;
+	margin-bottom: 35px;
 	text-align: center;
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	letter-spacing: 4px;
 	color: color.$main-text;
 }
 
+@media (width >= 355px) {
+	.title-section {
+		font-size: 1.5rem;
+	}
+}
 @media (width >= 576px) {
-	.title-section {
-		font-size: 1.4rem;
-	}
-}
-
-@media (width >= 768px) {
-	.title-section {
-		font-size: 1.7rem;
-	}
-}
-
-@media (width >= 992px) {
 	.title-section {
 		font-size: 2rem;
 	}
 }
 
-@media (width >= 1200px) {
+@media (width >= 768px) {
 	.title-section {
 		font-size: 2.4rem;
+	}
+}
+
+@media (width >= 992px) {
+	.title-section {
+		font-size: 2.8rem;
+	}
+}
+
+@media (width >= 1200px) {
+	.title-section {
+		font-size: 3.3rem;
 	}
 }
 
@@ -326,7 +331,7 @@ nav {
 	text-shadow: 1px 1px 1px black;
 }
 
-@media (width >= 576px) {
+@media (width >= 355px) {
 	.text-hero2 h1 {
 		font-size: 2rem;
 	}
@@ -335,9 +340,18 @@ nav {
 	}
 }
 
-@media (width >= 768px) {
+@media (width >= 576px) {
 	.text-hero2 h1 {
 		font-size: 2.5rem;
+	}
+	.hero2 {
+		height: 220px;
+	}
+}
+
+@media (width >= 768px) {
+	.text-hero2 h1 {
+		font-size: 3rem;
 	}
 	.hero2 {
 		height: 280px;
@@ -346,7 +360,7 @@ nav {
 
 @media (width >= 992px) {
 	.text-hero2 h1 {
-		font-size: 3rem;
+		font-size: 3.5rem;
 	}
 	.hero2 {
 		height: 300px;
@@ -355,7 +369,7 @@ nav {
 
 @media (width >= 1200px) {
 	.text-hero2 h1 {
-		font-size: 3.4rem;
+		font-size: 4rem;
 	}
 	.hero2 {
 		height: 330px;
@@ -375,16 +389,18 @@ nav {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	height: 700px;
+	height: 750px;
 	width: 80%;
-	padding: 2em;
+	padding: 0.1em;
 	background-color: color.$background;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 }
 .about-me-picture {
+
 	height: 90vw;
-	width: 70vw;
+	max-height: 50%;
+	width: 80%;
 	max-width: 80%;
 	margin-top: 3em;
 	background-image: url("../../dist/img/Właścicielka.jpeg");
@@ -392,7 +408,15 @@ nav {
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 15px;
+
 }
+
+// .about-me-picture img {
+// 	// width: 80%;
+// 	height: 50%;
+// 	border-radius: 15px;
+
+// }
 
 .about-me-text {
 	padding: 2em 3em;
