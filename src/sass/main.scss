@@ -35,6 +35,18 @@ body {
 	);
 }
 
+.gradient {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 15%;
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+}
+
 .title-section {
 	display: inline-block;
 	position: relative;
@@ -258,18 +270,6 @@ nav {
 	background-color: rgba(255, 37, 91, 0.35);
 }
 
-.gradient {
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-	height: 15%;
-	background: linear-gradient(
-		180deg,
-		rgba(255, 255, 255, 0) 0%,
-		rgba(255, 255, 255, 1) 100%
-	);
-}
-
 // HERO2
 
 .hero2 {
@@ -385,11 +385,11 @@ nav {
 }
 
 .about-me-box {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
 	align-items: center;
-	height: 750px;
+	height: 600px;
 	width: 80%;
 	padding: 0.1em;
 	background-color: color.$background;
@@ -397,18 +397,14 @@ nav {
 	border-top-right-radius: 15px;
 }
 .about-me-picture {
-
-	height: 90vw;
-	max-height: 50%;
-	width: 80%;
-	max-width: 80%;
+	height: 250px;
+	width: 150px;
 	margin-top: 3em;
 	background-image: url("../../dist/img/Właścicielka.jpeg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 15px;
-
 }
 
 // .about-me-picture img {
@@ -419,10 +415,59 @@ nav {
 // }
 
 .about-me-text {
-	padding: 2em 3em;
+	margin-bottom: 4em;
+	padding: 2em 2em;
+	text-align: center;
 	line-height: 1.3em;
 	font-size: 1.3rem;
-	text-align: center;
+	font-weight: 300;
+	color: black;
+}
+
+@media (width >= 376px) {
+	.about-me-text {
+		padding: 2em 4em;
+	}
+}
+
+@media (width >= 576px) {
+	.about-me-box {
+		height: 700px;
+	}
+	.about-me-text {
+		font-size: 1.6rem;
+		line-height: 1.4em;
+	}
+	.about-me-picture {
+		height: 350px;
+		width: 250px;
+	}
+}
+@media (width >= 768px) {
+	.about-me-box {
+		height: 750px;
+	}
+	.about-me-text {
+		font-size: 1.8rem;
+		line-height: 1.5em;
+	}
+}
+@media (width >= 992px) {
+	.about-me-box {
+		height: 800px;
+	}
+	.about-me-text {
+		font-size: 2rem;
+		padding: 2em 6em;
+		line-height: 1.6em;
+	}
+}
+
+.courses {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 // FOOTER
