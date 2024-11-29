@@ -51,7 +51,7 @@ body {
 	display: inline-block;
 	position: relative;
 	text-transform: uppercase;
-	margin-bottom: 	1.5em;
+	margin-bottom: 1.5em;
 	text-align: center;
 	font-size: 1.2rem;
 	letter-spacing: 4px;
@@ -347,6 +347,9 @@ nav {
 	.hero2 {
 		height: 220px;
 	}
+	.img-hero2 {
+		background-image: url("../../dist/img/HeroImage2Medium.JPG");
+	}
 }
 
 @media (width >= 768px) {
@@ -407,13 +410,6 @@ nav {
 	border-radius: 15px;
 }
 
-// .about-me-picture img {
-// 	// width: 80%;
-// 	height: 50%;
-// 	border-radius: 15px;
-
-// }
-
 .about-me-text {
 	margin-bottom: 4em;
 	padding: 1em 1em;
@@ -473,14 +469,20 @@ nav {
 	}
 }
 
-.courses {
-	flex-direction: column;
-}
+// COURSES
 
-.courses, .courses-cards-box, .course-title, .course-link  {
+.courses,
+.courses-cards-box,
+.course-title,
+.course-link {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.courses {
+	flex-direction: column;
+	margin-bottom: 10em;
 }
 
 .courses-cards-box {
@@ -498,12 +500,10 @@ nav {
 	background-size: cover;
 	background-position: center;
 	overflow: hidden;
-	transition: transform .3s;
+	transition: transform 0.3s;
 
-	box-shadow: 
-	2px 2px 4px rgba(0, 0, 0, 0.1), 
-	4px 4px 8px rgba(0, 0, 0, 0.15), 
-	6px 6px 12px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(0, 0, 0, 0.15),
+		6px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .course-card:hover {
@@ -554,11 +554,11 @@ nav {
 	white-space: nowrap;
 }
 
-
-.przedluzanie .course-title, .tempo .course-title,.doszkolenie .course-title {
+.przedluzanie .course-title,
+.tempo .course-title,
+.doszkolenie .course-title {
 	font-size: 1.1rem;
 }
-
 
 .course-link {
 	position: absolute;
@@ -591,7 +591,9 @@ nav {
 	.course-title {
 		font-size: 2rem;
 	}
-	.przedluzanie .course-title, .tempo .course-title,.doszkolenie .course-title {
+	.przedluzanie .course-title,
+	.tempo .course-title,
+	.doszkolenie .course-title {
 		font-size: 1.7rem;
 	}
 	.course-link {
@@ -611,7 +613,9 @@ nav {
 	.course-title {
 		font-size: 2.4rem;
 	}
-	.przedluzanie .course-title, .tempo .course-title,.doszkolenie .course-title {
+	.przedluzanie .course-title,
+	.tempo .course-title,
+	.doszkolenie .course-title {
 		font-size: 1.9rem;
 	}
 	.course-link {
@@ -620,6 +624,128 @@ nav {
 	.course-link:hover {
 		font-size: 2.5rem;
 	}
+}
+
+// HERO 3
+
+.hero3 {
+	position: relative;
+	margin-bottom: 5em;
+	height: 250px;
+	width: 100%;
+	background-image: url("../../dist/img/pomiędzy\ szkoleniami\ a\ ofertąSmall.JPG");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.hero3-shadow {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 184, 242, 0.4);
+}
+
+@media (width >= 576px) {
+	.hero3 {
+		background-image: url("../../dist/img/pomiędzy\ szkoleniami\ a\ ofertąMedium.JPG");
+	}
+}
+
+// TREATMENTS
+
+.treatments {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.treatments-cards-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.treatments-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 200px;
+	height: 400px;
+	margin: 2em;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+}
+
+.face {
+	background-image: url("../../dist/img/twarzSmall.jpg");
+}
+
+.nails {
+	background-image: url("../../dist/img/manicurepedicureSmall.JPG");
+}
+.eyelashes {
+	background-image: url("../../dist/img/rzęsySamll.JPG");
+}
+
+.treatments-card-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(255, 200, 214, 0.63);
+}
+
+.treatments-course-title {
+	position: absolute;
+	top: 10%;
+	padding: 1em 2em;
+	color: black;
+	border: 1px solid black;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 1.5rem;
+	// font-weight: 300;
+}
+
+.nails .treatments-course-title {
+	width: 80%;
+	padding: 0.5em 1em;
+	overflow-wrap: break-word;
+}
+
+.treatments-course-link {
+	position: absolute;
+	bottom: 15%;
+	padding: 0.5em 1em;
+	color: black;
+	border: 1px solid black;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 20px;
+	letter-spacing: 2px;
+	font-size: 1.5rem;
+	font-weight: 300;
+	z-index: 10;
+	transition: background-color .3s, transform .3s, color .3s;
+}
+
+.treatments-course-link:hover {
+	// transform: scale(1.05);
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #fff;
 }
 
 // FOOTER
