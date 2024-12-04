@@ -392,13 +392,24 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 630px;
+	// height: 630px;
 	width: 90%;
 	padding: 0.1em;
+	// padding-bottom: 2em;
 	background-color: color.$background;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
+	transform-style: preserve-3d;
 }
+
+.about-me-name {
+	margin: 1.5em;
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: black;
+}
+
 .about-me-picture {
 	height: 250px;
 	width: 150px;
@@ -408,6 +419,7 @@ nav {
 	background-position: center;
 	background-repeat: no-repeat;
 	border-radius: 15px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .about-me-text {
@@ -418,30 +430,33 @@ nav {
 	font-size: 1.5rem;
 	font-weight: 300;
 	color: black;
-}
-
-@media (width >= 280px) {
-	.about-me-text {
-		padding: 2em 2em;
-	}
-	.about-me-picture {
-		margin-top: 3em;
-	}
+	z-index: 10;
 }
 
 @media (width >= 376px) {
 	.about-me-box {
 		width: 80%;
 	}
+	.about-me-name {
+		letter-spacing: 2px;
+	}
+
 	.about-me-text {
-		padding: 2em 4em;
+		padding: 2em;
 		margin-bottom: 2em;
+	}
+	.about-me-picture {
+		height: 300px;
+		width: 200px;
 	}
 }
 
 @media (width >= 576px) {
 	.about-me-box {
 		height: 700px;
+	}
+	.about-me-name {
+		font-size: 1.7rem;
 	}
 	.about-me-text {
 		font-size: 1.6rem;
@@ -456,18 +471,28 @@ nav {
 	.about-me-box {
 		height: 750px;
 	}
+	.about-me-name {
+		font-size: 1.9rem;
+	}
 	.about-me-text {
 		font-size: 1.8rem;
 		line-height: 1.5em;
+	}
+	.about-me-picture {
+		height: 400px;
+		width: 300px;
 	}
 }
 @media (width >= 992px) {
 	.about-me-box {
 		height: 800px;
 	}
+	.about-me-name {
+		font-size: 2.1rem;
+	}
 	.about-me-text {
 		font-size: 2rem;
-		padding: 2em 6em;
+		padding: 2em 4em;
 		line-height: 1.6em;
 	}
 }
@@ -764,11 +789,12 @@ nav {
 
 // OUR TEAM
 
-.our-team {
+.our-team,
+.co-worker-info {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .all-team {
@@ -818,10 +844,6 @@ nav {
 }
 
 .co-worker-info {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
 	padding: 2em;
 	text-align: center;
 	color: black;
@@ -833,6 +855,7 @@ nav {
 .name {
 	margin-bottom: 1em;
 	font-size: 1.4rem;
+	letter-spacing: 2px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -919,7 +942,8 @@ nav {
 .footer-top {
 	flex-wrap: wrap;
 	justify-content: space-around;
-	margin-top: 400px;
+	margin-top: 4em;
+
 	@include main-gradient;
 }
 
@@ -955,7 +979,7 @@ nav {
 }
 
 .footer-hours {
-	width: 160px;
+	width: 170px;
 }
 
 .footer-hours > p {
@@ -996,4 +1020,14 @@ nav {
 	.fotter-adress-text {
 		font-size: 1.5em;
 	}
+}
+
+// CONTACT
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 3em;
 }
