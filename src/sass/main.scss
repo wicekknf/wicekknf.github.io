@@ -403,16 +403,21 @@ nav {
 }
 
 .about-me-name {
-	margin: 1.5em;
+	margin: 1.5em 0;
+	width: 100%;
+	text-align: center;
 	font-size: 1.5rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	color: black;
+	letter-spacing: 2px;
 }
 
 .about-me-picture {
-	height: 250px;
-	width: 150px;
+	// height: 250px;
+	// width: 150px;
+	width: 90%;
+	height: 360px;
 	margin-top: 1em;
 	background-image: url("../../dist/img/Właścicielka.jpeg");
 	background-size: cover;
@@ -434,26 +439,20 @@ nav {
 }
 
 @media (width >= 376px) {
-	.about-me-box {
-		width: 80%;
-	}
-	.about-me-name {
-		letter-spacing: 2px;
-	}
-
 	.about-me-text {
 		padding: 2em;
 		margin-bottom: 2em;
 	}
 	.about-me-picture {
-		height: 300px;
-		width: 200px;
+		height: 400px;
+		width: 300px;
 	}
 }
 
 @media (width >= 576px) {
 	.about-me-box {
 		height: 700px;
+		width: 80%;
 	}
 	.about-me-name {
 		font-size: 1.7rem;
@@ -1024,10 +1023,63 @@ nav {
 
 // CONTACT
 
-.contact {
+.contact,
+.contact-address,
+.contact-adress-text {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.contact {
 	margin-top: 3em;
+}
+
+.contact-address {
+	margin-top: 1em;
+	margin-bottom: 5em;
+}
+
+.contact-adress-text {
+	text-align: center;
+	line-height: 1.9em;
+	font-size: 1.6rem;
+}
+
+.contact-social-icons {
+	display: flex;
+	width: 40%;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.contact-social-icons a {
+	margin-top: 0.3em;
+	font-size: 2.8rem;
+	text-decoration: none;
+	color: black;
+}
+
+.contact-map {
+	width: 90%;
+	height: 60vh;
+	max-width: 600px;
+}
+
+@media (width >= 576px) {
+	.contact-adress-text {
+		font-size: 1.8rem;
+	}
+	.contact-social-icons a {
+		font-size: 3.3rem;
+	}
+}
+@media (width >= 992px) {
+	.contact-adress-text {
+		font-size: 2.5rem;
+	}
+	.contact-social-icons a {
+		font-size: 4.1rem;
+	}
 }
