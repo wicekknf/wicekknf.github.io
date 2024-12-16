@@ -1182,3 +1182,40 @@ nav {
 		font-size: 1.5rem;
 	}
 }
+
+// FACE PRICE
+
+.face-price{
+	padding: 0 0.5em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	text-transform: uppercase;
+	border: solid black 2px;
+}
+
+.face-price-title{
+	margin: 0.5em 0;
+	letter-spacing: 3px;
+	font-size: 4rem;
+	// text-transform: uppercase;
+}
+
+.face-price-info{
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	font-size: 2rem;
+	text-align: center;
+}
+.prices-box{
+	width: 100%;
+}
+.item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.4em;
+}
