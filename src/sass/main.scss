@@ -1083,3 +1083,102 @@ nav {
 		font-size: 4.1rem;
 	}
 }
+
+// STATUTE
+.statute {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.statute-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5em;
+	padding: 2em;
+	width: 90%;
+	color: black;
+	border: 16px solid black;
+	background: rgb(224, 160, 241);
+	background: linear-gradient(
+		-45deg,
+		rgb(239, 134, 161) 0%,
+		rgba(251, 171, 191) 50%,
+		rgb(247, 225, 230) 100%
+	);
+}
+
+.statute-title {
+	text-transform: uppercase;
+	margin: 0.5em 0em 0.5em 0em;
+	letter-spacing: 2px;
+	font-size: 2.5rem;
+}
+
+.statute-owner {
+	margin-bottom: 2em;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	line-height: 15px;
+	letter-spacing: 3px;
+}
+
+.statute-list {
+	margin-left: 1em;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.statute-list li {
+	margin-bottom: 0.5em;
+}
+
+@media (width >= 376px) {
+	.statute-box {
+		width: 300px;
+	}
+}
+@media (width >= 576px) {
+	.statute-box {
+		width: 300px;
+	}
+
+	.statute-title {
+		letter-spacing: 5px;
+		font-size: 3rem;
+	}
+
+	.statute-owner {
+		font-size: 1.7rem;
+		line-height: 20px;
+		letter-spacing: 3.5px;
+	}
+
+	.statute-list {
+		font-size: 1.2rem;
+	}
+}
+
+@media (width >= 768px) {
+	.statute-box {
+		width: 450px;
+	}
+
+	.statute-title {
+		letter-spacing: 8px;
+		font-size: 5.2rem;
+	}
+
+	.statute-owner {
+		font-size: 2.5rem;
+		line-height: 1.4em;
+		letter-spacing: 3.8px;
+	}
+
+	.statute-list {
+		font-size: 1.5rem;
+	}
+}
