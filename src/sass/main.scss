@@ -1213,9 +1213,8 @@ nav {
 	}
 }
 
-// FACE PRICE
-
-.face-price {
+//PRICES
+.price {
 	margin-top: 4em;
 	padding: 0 0.5em;
 	display: flex;
@@ -1227,14 +1226,14 @@ nav {
 	border: solid black 2px;
 }
 
-.face-price-title {
+.price-title {
 	margin: 0.5em 0;
 	letter-spacing: 3px;
 	font-size: 4rem;
 	// text-transform: uppercase;
 }
 
-.face-price-info {
+.price-info {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
@@ -1257,6 +1256,17 @@ nav {
 	margin: 0 1em;
 }
 
-.one, .five, .eight {
+// FACE PRICE
+
+.face-one,
+.face-five,
+.face-eight {
+	margin-bottom: 3em;
+}
+
+//MANICURE PRICE
+
+.manicure-ten,
+.manicure-thirteen {
 	margin-bottom: 3em;
 }
