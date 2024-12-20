@@ -51,18 +51,13 @@ body {
 	display: inline-block;
 	position: relative;
 	text-transform: uppercase;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.3em;
 	text-align: center;
-	font-size: 1.4rem;
+	font-size: 1.8rem;
 	letter-spacing: 4px;
 	color: color.$main-text;
 }
 
-@media (width >= 355px) {
-	.title-section {
-		font-size: 1.6rem;
-	}
-}
 @media (width >= 576px) {
 	.title-section {
 		font-size: 2rem;
@@ -311,22 +306,18 @@ nav {
 }
 
 .text-hero2 {
-	// display: flex;
 	position: absolute;
-	// height: 100%;
 	width: 90%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	// justify-content: center;
-	// align-items: center;
 	padding: 1em;
 }
 .text-hero2 h1 {
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 2px;
-	font-size: 1.6rem;
+	font-size: 1.9rem;
 	color: #fff;
 	text-shadow: 1px 1px 1px black;
 }
@@ -414,8 +405,6 @@ nav {
 }
 
 .about-me-picture {
-	// height: 250px;
-	// width: 150px;
 	width: 90%;
 	height: 360px;
 	margin-top: 1em;
@@ -514,7 +503,6 @@ nav {
 
 .courses-cards-box {
 	flex-wrap: wrap;
-	// perspective: 1000px;
 }
 
 .course-card {
@@ -748,11 +736,10 @@ nav {
 	text-align: center;
 	letter-spacing: 2px;
 	font-size: 1.6rem;
-	// font-weight: 300;
 }
 
 .nails .treatments-course-title {
-	width: 80%;
+	width: 70%;
 	padding: 0.5em 1em;
 	overflow-wrap: break-word;
 }
@@ -789,21 +776,18 @@ nav {
 		width: 290px;
 		height: 490px;
 	}
+
+	.treatments-course-title {
+		font-size: 2rem;
+	}
+	.nails .treatments-course-title {
+		
+		padding: 0.8em 1em;
+	}
+
 	.treatments-course-link {
-	position: absolute;
-	bottom: 15%;
-	padding: 0.5em 1em;
-	color: black;
-	border: 1px solid black;
-	text-transform: uppercase;
-	text-decoration: none;
-	border-radius: 20px;
-	letter-spacing: 2px;
-	font-size: 2rem;
-	// font-weight: 300;
-	z-index: 10;
-	transition: background-color 0.3s, transform 0.3s, color 0.3s;
-}
+		font-size: 2rem;
+	}
 }
 
 // OUR TEAM
