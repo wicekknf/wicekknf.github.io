@@ -784,6 +784,26 @@ nav {
 		margin-left: 3em;
 		margin-right: 3em;
 	}
+
+	.treatments-card {
+		width: 290px;
+		height: 490px;
+	}
+	.treatments-course-link {
+	position: absolute;
+	bottom: 15%;
+	padding: 0.5em 1em;
+	color: black;
+	border: 1px solid black;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 20px;
+	letter-spacing: 2px;
+	font-size: 2rem;
+	// font-weight: 300;
+	z-index: 10;
+	transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
 }
 
 // OUR TEAM
@@ -1102,22 +1122,6 @@ nav {
 	color: black;
 	border: 16px solid black;
 
-	// background: rgb(224, 160, 241);
-	// background: linear-gradient(
-	// 	-45deg,
-	// 	rgb(239, 134, 161) 0%,
-	// 	rgba(251, 171, 191) 50%,
-	// 	rgb(247, 225, 230) 100%
-	// );
-
-	// background: linear-gradient(
-	//     -45deg,
-	//     rgba(239, 134, 161, 1) 0%,
-	//     rgba(251, 171, 191, 1) 30%,
-	//     rgba(247, 225, 230, 1) 60%,
-	//     rgba(224, 160, 241, 1) 100%
-	// );
-
 	background: linear-gradient(
 		-45deg,
 		rgb(239, 141, 166) 0%,
@@ -1128,15 +1132,6 @@ nav {
 	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
 	box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
-
-// .gradient-statute {
-// 	position: absolute;
-// 	height: 100%;
-// 	width: 100%;
-// 	top: 0;
-// 	left: 0;
-
-// }
 
 .statute-title {
 	text-transform: uppercase;
@@ -1270,3 +1265,5 @@ nav {
 .manicure-thirteen {
 	margin-bottom: 3em;
 }
+
+// LASHES
