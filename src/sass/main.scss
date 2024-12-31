@@ -1202,6 +1202,12 @@ nav {
 	position: relative;
 	width: 80%;
 	text-transform: uppercase;
+
+	background-image: url("/dist/img/tło\ od\ Patrycji.jpg");
+	background-size: cover;
+	background-position: center;
+
+
 	border: solid black 2px;
 	border-radius: 25px;
 	overflow: hidden;
@@ -1210,15 +1216,6 @@ nav {
 		color: black;
 }
 
-.price-shadow {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	background-color: rgba(245, 179, 222, 0.85);
-	z-index: 0;
-}
 
 .price-title {
 	margin: 0.5em 0;
@@ -1238,8 +1235,19 @@ nav {
 	z-index: 1;
 }
 .prices-box {
+	position: relative;
 	width: 100%;
 }
+
+.strip {
+	position: absolute;
+	top: 0;
+	left: 70%;
+	width: 10px;
+	height: 100%;
+	background-color: black;
+}
+
 .item {
 	display: flex;
 	justify-content: space-between;
@@ -1279,14 +1287,13 @@ nav {
 
 //MANICURE PRICE
 
-.manicure {
-	background-image: url("/dist/img/paznocie-cennik.JPG");
-	background-size: cover;
-	background-position: center;
+.left {
+	display: inline-block;
+	max-width: 60%;
 }
 
-.manicure-ten,
-.manicure-thirteen {
+.manicure-eleven,
+.manicure-fourteen {
 	margin-bottom: 3em;
 }
 
