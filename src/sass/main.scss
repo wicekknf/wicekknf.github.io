@@ -1105,13 +1105,10 @@ nav {
 	color: black;
 	border: 16px solid black;
 
-	background: linear-gradient(
-		-45deg,
-		rgb(239, 141, 166) 0%,
-		rgba(255, 192, 203, 1) 30%,
-		/* Jaśniejszy róż */ rgba(247, 225, 230, 1) 60%,
-		rgb(251, 156, 192) 100%
-	);
+	background-image: url("/dist/img/tło\ od\ Patrycji.jpg");
+	background-size: cover;
+	background-position: center;
+
 	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
 	box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
@@ -1141,7 +1138,7 @@ nav {
 }
 
 .statute-list li {
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
 }
 
 @media (width >= 376px) {
@@ -1191,7 +1188,29 @@ nav {
 	}
 }
 
+@media (width >= 992px) {
+	.statute-box {
+		width: 800px;
+		padding: 3em 7em;
+	}
+
+	.statute-title {
+		font-size: 6rem;
+	}
+
+	.statute-owner {
+		font-size: 3.5rem;
+		line-height: 1.4em;
+		letter-spacing: 3.8px;
+	}
+
+	.statute-list {
+		font-size: 2rem;
+	}
+}
+
 //PRICES
+
 .price {
 	margin-top: 4em;
 	padding: 0 0.5em;
@@ -1207,22 +1226,19 @@ nav {
 	background-size: cover;
 	background-position: center;
 
-
-	border: solid black 2px;
+	border: solid color.$main-text 7px;
 	border-radius: 25px;
 	overflow: hidden;
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(0, 0, 0, 0.15),
 		6px 6px 12px rgba(0, 0, 0, 0.2);
-		color: black;
+	color: black;
 }
-
 
 .price-title {
 	margin: 0.5em 0;
 	letter-spacing: 3px;
 	font-size: 4rem;
 	z-index: 1;
-	// text-transform: uppercase;
 }
 
 .price-info {
@@ -1239,20 +1255,24 @@ nav {
 	width: 100%;
 }
 
+.prices-box:last-child {
+	margin-bottom: 5em;
+}
+
 .strip {
 	position: absolute;
 	top: 0;
 	left: 70%;
-	width: 10px;
+	width: 7px;
 	height: 100%;
-	background-color: black;
+	background-color: color.$main-text;
 }
 
 .item {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 1em;
+	margin-bottom: 1.3em;
 
 	// margin: 0.7em 0;
 	// border-bottom: solid 1px black;
@@ -1260,6 +1280,12 @@ nav {
 .item p {
 	margin: 0 1em;
 	z-index: 1;
+}
+
+@media (width > 300px) {
+	.strip {
+		left: 77%;
+	}
 }
 
 @media (width > 576px) {
@@ -1274,6 +1300,22 @@ nav {
 	}
 	.prices-box {
 		font-size: 1.5rem;
+	}
+}
+
+@media (width > 992px) {
+	.price {
+		width: 700px;
+		padding: 0 2em;
+	}
+	.price-title {
+		font-size: 7rem;
+	}
+	.price-info {
+		font-size: 4rem;
+	}
+	.prices-box {
+		font-size: 2rem;
 	}
 }
 
@@ -1294,7 +1336,7 @@ nav {
 
 .manicure-eleven,
 .manicure-fourteen {
-	margin-bottom: 3em;
+	margin-bottom: 3.8em;
 }
 
 // LASHES
