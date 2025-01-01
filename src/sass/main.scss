@@ -882,9 +882,6 @@ nav {
 	.co-worker-info {
 		width: 90%;
 		padding: 0 3em;
-		color: black;
-		line-height: 1.5em;
-		font-weight: 300;
 	}
 
 	.co-worker-card .patrycja {
@@ -893,6 +890,22 @@ nav {
 
 	.co-worker-card .julia {
 		order: 1;
+	}
+}
+
+@media (width >= 992px) {
+	.co-worker-card {
+		display: flex;
+		flex-direction: row;
+		max-width: 900px;
+	}
+
+	.co-worker-info p {
+		font-size: 2rem;
+		line-height: 1.4em;
+	}
+	.name {
+		font-size: 1.4rem;
 	}
 }
 
@@ -1340,3 +1353,42 @@ nav {
 }
 
 // LASHES
+
+// COURSES
+
+.course {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.course-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3em;
+	width: 90%;
+	border: 1px solid black;
+}
+.course-side-title {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-size: 1.5rem;
+}
+.main-title {
+	// margin-right: auto;
+	text-transform: uppercase;
+}
+.bottom-title {
+	margin-left: auto;
+	font-family: "Luxurious Script", sans-serif;
+
+}
+.course-info{
+	background-image: url("/dist/img/tło\ od\ Patrycji.jpg");
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+}
+
