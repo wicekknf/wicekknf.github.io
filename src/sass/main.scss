@@ -1374,21 +1374,49 @@ nav {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 }
 .main-title {
-	// margin-right: auto;
+	margin-left: 0.5em;
+	margin-top: 0.5em;
 	text-transform: uppercase;
 }
 .bottom-title {
 	margin-left: auto;
+	margin-right: 0.5em;
 	font-family: "Luxurious Script", sans-serif;
-
 }
-.course-info{
+.course-info {
 	background-image: url("/dist/img/tło\ od\ Patrycji.jpg");
 	background-size: cover;
 	background-position: center;
 	width: 100%;
+	text-transform: uppercase;
+	font-size: 1.2rem;
 }
 
+.course-info-top {
+	margin-bottom: 2em;
+}
+
+.course-info-top p {
+	font-weight: 550;
+	margin: 0.5em 0 0.5em 1em;
+}
+.course-info-top ul {
+	margin-left: 2em;
+}
+
+.course-info-bottom {
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: 0.5em;
+	margin-bottom: 2em;
+	width: 50%;
+	text-align: center;
+}
+.for-who {
+	margin-bottom: 0.5em;
+	font-weight: 550;
+}
