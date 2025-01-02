@@ -5,7 +5,6 @@ const barsX = document.querySelector(".bars-x");
 const navBottomLinks = document.querySelectorAll(".menu-list a");
 const year = document.querySelector(".year");
 
-console.log(navBottomLinks);
 
 const currentYear = new Date().getFullYear();
 

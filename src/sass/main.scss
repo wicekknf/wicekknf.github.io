@@ -241,13 +241,23 @@ nav {
 		background-color: #ffffff;
 	}
 }
+
+@media (width >= 992px) {
+	.big-menu-list a {
+		font-size: 2.1rem;
+	}
+}
+@media (width >= 1200px) {
+	.big-menu-list a {
+		font-size: 2.6rem;
+	}
+}
+
 // HERO1
 
 .hero1 {
 	position: relative;
 	margin-top: 70px;
-	// width: 100%;
-	// height: 100%;
 }
 
 .hero1 {
@@ -527,19 +537,19 @@ nav {
 }
 
 .basic {
-	background-image: url("../../dist/img/Manicure\ BasicSmall.jpeg");
+	background-image: url("../../dist/img/Manicure\ BasicMedium.jpeg");
 }
 
 .przedluzanie {
-	background-image: url("../../dist/img/PrzedłużanieSmall.jpeg");
+	background-image: url("../../dist/img/PrzedłużanieMedium.jpeg");
 }
 
 .tempo {
-	background-image: url("../../dist/img/Tempo\ pracySmall.jpeg");
+	background-image: url("../../dist/img/Tempo\ pracyMedium.jpeg");
 }
 
 .doszkolenie {
-	background-image: url("../../dist/img/DoszkolenieSmall.jpeg");
+	background-image: url("../../dist/img/DoszkolenieMedium.jpeg");
 }
 
 .card-shadow {
@@ -891,6 +901,21 @@ nav {
 	.co-worker-card .julia {
 		order: 1;
 	}
+	.klaudia {
+		background-image: url("../../dist/img/KlaudiaMedium.JPG");
+	}
+
+	.patrycja {
+		background-image: url("../../dist/img/Patrycja\ bratowaMedium.JPG");
+	}
+
+	.marita {
+		background-image: url("../../dist/img/MaritaMedium.JPG");
+	}
+
+	.julia {
+		background-image: url("../../dist/img/JuliaMedium.JPG");
+	}
 }
 
 @media (width >= 992px) {
@@ -906,6 +931,9 @@ nav {
 	}
 	.name {
 		font-size: 1.4rem;
+	}
+	.all-team {
+		max-width: 900px;
 	}
 }
 
@@ -1286,9 +1314,6 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 1.3em;
-
-	// margin: 0.7em 0;
-	// border-bottom: solid 1px black;
 }
 .item p {
 	margin: 0 1em;
@@ -1361,29 +1386,36 @@ nav {
 	align-items: center;
 	justify-content: center;
 }
-.course-box {
+
+.course-box,
+.course-side-title,
+.course-info-bottom {
 	display: flex;
 	flex-direction: column;
+}
+
+.course-box {
 	justify-content: center;
 	align-items: center;
-	margin-top: 3em;
+	margin-top: 5em;
+	margin-bottom: 2em;
 	width: 90%;
-	border: 1px solid black;
+	border-radius: 25px;
+	overflow: hidden;
+	box-shadow: 0px 0px 15px color.$border;
 }
 .course-side-title {
-	display: flex;
-	flex-direction: column;
 	width: 100%;
 	font-size: 1.8rem;
 }
 .main-title {
-	margin-left: 0.5em;
+	margin-left: 1em;
 	margin-top: 0.5em;
 	text-transform: uppercase;
 }
 .bottom-title {
 	margin-left: auto;
-	margin-right: 0.5em;
+	margin-right: 1em;
 	font-family: "Luxurious Script", sans-serif;
 }
 .course-info {
@@ -1401,15 +1433,13 @@ nav {
 
 .course-info-top p {
 	font-weight: 550;
-	margin: 0.5em 0 0.5em 1em;
+	margin: 1.5em 0 0.5em 1em;
 }
 .course-info-top ul {
 	margin-left: 2em;
 }
 
 .course-info-bottom {
-	display: flex;
-	flex-direction: column;
 	margin-left: auto;
 	margin-right: 0.5em;
 	margin-bottom: 2em;
@@ -1419,4 +1449,55 @@ nav {
 .for-who {
 	margin-bottom: 0.5em;
 	font-weight: 550;
+}
+
+@media (width > 350px) {
+	.course-box {
+		width: 310px;
+	}
+	.main-title {
+		margin-left: 17%;
+	}
+	.bottom-title {
+		margin-right: 17%;
+	}
+}
+@media (width > 576px) {
+	.course-box {
+		width: 480px;
+	}
+	.course-side-title {
+		font-size: 2.8rem;
+	}
+	.course-info {
+		font-size: 1.8rem;
+	}
+}
+@media (width > 768px) {
+	.course-box {
+		margin-top: 7em;
+		margin-bottom: 4em;
+	}
+
+	.course-box {
+		width: 580px;
+	}
+	.course-side-title {
+		font-size: 3.9rem;
+	}
+	.course-info {
+		font-size: 2.4rem;
+	}
+}
+@media (width > 992px) {
+	.course-box {
+		width: 90%;
+		max-width: 1100px;
+	}
+	.course-side-title {
+		font-size: 6.5rem;
+	}
+	.course-info {
+		font-size: 3.5rem;
+	}
 }
