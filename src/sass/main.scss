@@ -999,7 +999,10 @@ nav {
 	font-size: 1.3rem;
 }
 
-.fotter-adress-text,
+.fotter-adress-text {
+	margin: 1.5em 0;
+}
+
 .footer-links,
 .footer-hours {
 	margin: 1.5em;
@@ -1097,6 +1100,9 @@ nav {
 @media (width >= 340px) {
 	.fotter-adress-text {
 		font-size: 1.5em;
+	}
+	.fotter-adress-text {
+		margin: 1.5em;
 	}
 }
 
@@ -1545,11 +1551,6 @@ nav {
 		font-size: 1.15rem;
 	}
 }
-
-
-// .portfolio-title {
-// 	font-size: clamp (0.4rem, calc(7vw + 1rem), 3rem)
-// }
 
 .portfolio {
 	display: flex;
