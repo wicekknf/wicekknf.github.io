@@ -1504,6 +1504,7 @@ nav {
 
 @media (width < 400px) {
 	.portfolio-title {
+		margin-bottom: 2em;
 		font-size: 1rem;
 	}
 }
@@ -1521,18 +1522,78 @@ nav {
 	width: 120%;
 }
 
-.image {
-	height: 200px;
-	width: 200px;
-	background-size: cover;
-	background-position: center;
-	transition: transform 0.5s;
+.images-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
-.image:hover {
-	transform: scale(1.5);
+.portfolio-img {
+	margin: 1.7em;
+	max-width: 250px;
+	height: auto;
+	border-radius: 20px;
+
+	transition: transform 0.5s ease, opacity 0.5s ease;
+	animation: fadeIn 1s forwards;
 }
 
-.img-1{
-	background-image: url("/dist/img/paznokcie1-small.jpeg");
+.portfolio-img:hover {
+	transform: scale(1.1);
+	opacity: 0.8;
+}
+
+// .image {
+// 	margin: 1.7em;
+// 	// height: 200px;
+// 	width: 200px;
+// 	background-size: cover;
+// 	background-position: center;
+// 	border-radius: 20px;
+// 	// transition: transform 0.5s;
+// 	transition: transform 0.5s ease, opacity 0.5s ease;
+// 	animation: fadeIn 1s forwards;
+// }
+
+// .image:hover {
+// 	transform: scale(1.3);
+// 	opacity: 0.8;
+// }
+
+// .img-1 {
+// 	background-image: url("/dist/img/paznokcie1-small.jpeg");
+// }
+
+// .img-2 {
+// 	background-image: url("/dist/img/paznokcie2small.jpeg");
+// }
+
+// .img-3 {
+// 	background-image: url("/dist/img/paznokcie3small.jpeg");
+// }
+
+// .img-4 {
+// 	background-image: url("/dist/img/paznokcie4small.jpeg");
+// }
+
+// .img-5 {
+// 	background-image: url("/dist/img/paznokcie5small.jpeg");
+// }
+
+// .img-6 {
+// 	background-image: url("/dist/img/paznokcie6small.jpeg");
+// }
+
+// .img-7 {
+// 	background-image: url("/dist/img/paznokcie7small.jpeg");
+// }
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
