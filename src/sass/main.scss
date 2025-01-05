@@ -35,6 +35,10 @@ body {
 	);
 }
 
+@mixin card-main-shadow {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 .gradient {
 	position: absolute;
 	width: 100%;
@@ -92,12 +96,6 @@ body {
 	background-color: color.$main-text;
 }
 
-// h3 {
-// 	text-transform: uppercase;
-// 	text-align: center;
-// 	margin: 20px 0;
-// }
-
 .logo {
 	width: 70px;
 	height: 55px;
@@ -144,6 +142,10 @@ nav {
 	cursor: pointer;
 	background: none;
 }
+.burger-btn:focus-visible {
+	outline: none;
+	border: 1px solid color.$main-text;
+}
 
 .ti-menu-2 {
 	font-size: 5rem;
@@ -188,6 +190,12 @@ nav {
 	font-size: 2em;
 	color: color.$main-text;
 }
+
+.menu-list a:focus-visible {
+	outline: none;
+	border: 1px solid color.$main-text;
+}
+
 .big-menu-list {
 	display: none;
 }
@@ -217,6 +225,11 @@ nav {
 		color: color.$main-text;
 		font-weight: bold;
 		font-size: 1.7rem;
+	}
+
+	.big-menu-list a:focus-visible {
+		outline: none;
+		border: 1px solid color.$main-text;
 	}
 
 	.big-menu-list a::after {
@@ -601,6 +614,12 @@ nav {
 	transition: background-color 0.3s, color 0.3s, font-size 0.3s;
 }
 
+.course-link:focus-visible {
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.7);
+	color: black;
+}
+
 .course-link:hover {
 	background-color: rgba(255, 255, 255, 0.7);
 	color: black;
@@ -768,6 +787,12 @@ nav {
 	transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
 
+.treatments-course-link:focus-visible {
+	outline: none;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #fff;
+}
+
 .treatments-course-link:hover {
 	// transform: scale(1.05);
 	background-color: rgba(0, 0, 0, 0.7);
@@ -813,7 +838,7 @@ nav {
 	width: 95%;
 	max-width: 700px;
 	border-radius: 50px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 8px 20px rgba(0, 0, 0, 0.3);
+	@include card-main-shadow;
 }
 
 .co-worker-card {
@@ -825,7 +850,7 @@ nav {
 	border-radius: 50px;
 	background-color: color.$background;
 	overflow: hidden;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 8px 20px rgba(0, 0, 0, 0.3);
+	@include card-main-shadow;
 }
 
 .co-worker-img {
@@ -984,7 +1009,6 @@ nav {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	margin-top: 4em;
-
 	@include main-gradient;
 }
 
@@ -1002,6 +1026,7 @@ nav {
 	text-decoration: none;
 	font-size: 1.9rem;
 	color: color.$main-text;
+	transition: color 0.6s;
 }
 
 .footer-links {
@@ -1013,7 +1038,19 @@ nav {
 	text-transform: uppercase;
 	color: color.$main-text;
 	padding: 0.5em;
+	transition: color 0.6s;
 }
+
+.footer-links a:focus-visible {
+	outline: none;
+	border: 1px solid color.$main-text;
+}
+
+.footer-links a:hover,
+.social-icons a:hover {
+	color: #fff;
+}
+
 .footer-links a:active {
 	color: #fff;
 	background-color: none;
@@ -1530,13 +1567,16 @@ nav {
 }
 
 .portfolio-img {
-	margin: 1.7em;
-	max-width: 250px;
+	// margin: 1.7em;
+	margin: 1.7em 0 1.7em 0;
+	min-width: 260px;
+	width: 35vw;
 	height: auto;
 	border-radius: 20px;
 
 	transition: transform 0.5s ease, opacity 0.5s ease;
 	animation: fadeIn 1s forwards;
+	@include card-main-shadow;
 }
 
 .portfolio-img:hover {
@@ -1544,56 +1584,19 @@ nav {
 	opacity: 0.8;
 }
 
-// .image {
-// 	margin: 1.7em;
-// 	// height: 200px;
-// 	width: 200px;
-// 	background-size: cover;
-// 	background-position: center;
-// 	border-radius: 20px;
-// 	// transition: transform 0.5s;
-// 	transition: transform 0.5s ease, opacity 0.5s ease;
-// 	animation: fadeIn 1s forwards;
-// }
-
-// .image:hover {
-// 	transform: scale(1.3);
-// 	opacity: 0.8;
-// }
-
-// .img-1 {
-// 	background-image: url("/dist/img/paznokcie1-small.jpeg");
-// }
-
-// .img-2 {
-// 	background-image: url("/dist/img/paznokcie2small.jpeg");
-// }
-
-// .img-3 {
-// 	background-image: url("/dist/img/paznokcie3small.jpeg");
-// }
-
-// .img-4 {
-// 	background-image: url("/dist/img/paznokcie4small.jpeg");
-// }
-
-// .img-5 {
-// 	background-image: url("/dist/img/paznokcie5small.jpeg");
-// }
-
-// .img-6 {
-// 	background-image: url("/dist/img/paznokcie6small.jpeg");
-// }
-
-// .img-7 {
-// 	background-image: url("/dist/img/paznokcie7small.jpeg");
-// }
-
 @keyframes fadeIn {
 	from {
 		opacity: 0;
 	}
 	to {
 		opacity: 1;
+	}
+}
+@media (width > 400px) {
+	.portfolio-img {
+		margin: 2em;
+	}
+	.portfolio-img {
+		min-width: 300px;
 	}
 }
