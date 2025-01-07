@@ -1560,6 +1560,8 @@ nav {
 	margin-top: 3em;
 }
 
+
+
 .portfolio-title::after {
 	left: -10%;
 	width: 120%;
@@ -1570,6 +1572,11 @@ nav {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+}
+
+.rzęsy {
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 .portfolio-img {
@@ -1587,6 +1594,7 @@ nav {
 .portfolio-img:hover {
 	transform: scale(1.1);
 	opacity: 0.8;
+	z-index: 3;
 }
 
 @keyframes fadeIn {
