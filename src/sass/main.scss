@@ -285,8 +285,7 @@ nav {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	// background-color: rgba(255, 37, 91, 0.35);
-	background-color: rgba(251, 171,191,0.57);
+	background-color: rgba(251, 171, 191, 0.57);
 }
 
 // HERO2
@@ -307,12 +306,19 @@ nav {
 	background-repeat: no-repeat;
 }
 
-.unfix-ios-bg {
-    @supports (-webkit-touch-callout: none) {
-        background-attachment: initial !important;
-    }
-}
+// UWAGA!!!! SPRAWDZIĆ CZY DZIAŁA - KOD DLA IOS
 
+.unfix-ios-bg {
+	@supports (-webkit-touch-callout: none) {
+		background-attachment: initial !important;
+		height: 100%;
+		width: 100%;
+		background-image: url("../../dist/img/HeroImage2Small.JPG");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
 
 .shadow-hero2,
 .gradient-hero2 {
@@ -689,6 +695,21 @@ nav {
 	background-position: center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+}
+
+// UWAGA!!! SPRAWDZIĆ CZY DZIAŁA - KOD DLA IOS
+.unfix-ios-bg2 {
+	@supports (-webkit-touch-callout: none) {
+		background-attachment: initial !important;
+		position: relative;
+		margin-bottom: 5em;
+		height: 250px;
+		width: 100%;
+		background-image: url("../../dist/img/pomiędzy\ szkoleniami\ a\ ofertąSmall.JPG");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 }
 
 .hero3-shadow {
@@ -1349,7 +1370,8 @@ nav {
 	margin-bottom: 5em;
 }
 
-.strip, .strip-lashes {
+.strip,
+.strip-lashes {
 	position: absolute;
 	top: 0;
 	left: 70%;
@@ -1359,7 +1381,7 @@ nav {
 }
 
 .strip-lashes {
-left: 83%;
+	left: 83%;
 }
 
 .item {
@@ -1377,10 +1399,9 @@ left: 83%;
 	.strip {
 		left: 77%;
 	}
-	
 }
 
-@media (width > 350px){
+@media (width > 350px) {
 	.price {
 		width: 83%;
 	}
@@ -1602,7 +1623,6 @@ left: 83%;
 	flex-direction: column;
 	margin-top: 3em;
 }
-
 
 .portfolio-title::after {
 	left: -10%;
