@@ -307,6 +307,13 @@ nav {
 	background-repeat: no-repeat;
 }
 
+.unfix-ios-bg {
+    @supports (-webkit-touch-callout: none) {
+        background-attachment: initial !important;
+    }
+}
+
+
 .shadow-hero2,
 .gradient-hero2 {
 	position: absolute;
