@@ -62,6 +62,14 @@ body {
 	color: color.$main-text;
 }
 
+@mixin hero-shadow-mixin {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
 @media (width >= 576px) {
 	.title-section {
 		font-size: 2rem;
@@ -280,11 +288,7 @@ nav {
 }
 
 .pink-color {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
+	@include hero-shadow-mixin;
 	background-color: rgba(251, 171, 191, 0.57);
 }
 
@@ -322,11 +326,7 @@ nav {
 
 .shadow-hero2,
 .gradient-hero2 {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
+	@include hero-shadow-mixin;
 }
 .shadow-hero2 {
 	background-color: rgba(255, 37, 91, 0.35);
@@ -525,7 +525,8 @@ nav {
 .courses,
 .courses-cards-box,
 .course-title,
-.course-link {
+.course-link,
+.offer-courses {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -534,6 +535,53 @@ nav {
 .courses {
 	flex-direction: column;
 	margin-bottom: 10em;
+}
+
+.offer-courses {
+	flex-direction: column;
+	position: relative;
+	padding: 1em;
+	width: 85%;
+	border-radius: 30px;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 1.6rem;
+	overflow: hidden;
+	background-image: url("/dist/img/heroDlaOfertySzkoleńSmall.JPG");
+	background-size: cover;
+	background-position: center;
+
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 4px 4px 8px rgba(0, 0, 0, 0.15),
+		6px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.offer-courses-shadow {
+	@include hero-shadow-mixin;
+	background-color: color.$cardOfferShadow;
+}
+
+.top-heading,
+.bottom-heading {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.6rem;
+	z-index: 1;
+}
+
+.top-heading {
+	margin: 1em 0 1em;
+}
+
+.offer-courses-list {
+	margin-left: 1em;
+	margin-bottom: 1em;
+	z-index: 1;
+	li {
+		margin-bottom: 0.7em;
+	}
+}
+.bottom-heading {
+	margin: 3em 0.5em 0 0.5em;
 }
 
 .courses-cards-box {
@@ -578,11 +626,7 @@ nav {
 }
 
 .card-shadow {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
+	@include hero-shadow-mixin;
 	background-color: color.$cardShadow;
 }
 
@@ -681,8 +725,41 @@ nav {
 	.course-link:hover {
 		font-size: 2.5rem;
 	}
+
+	.offer-courses {
+		width: 400px;
+		font-size: 1.7rem;
+	}
+	.top-heading,
+	.bottom-heading {
+		font-size: 1.8rem;
+	}
+	.offer-courses-list {
+		padding: 0 2em;
+	}
 }
 
+@media (width >= 768px) {
+	.offer-courses {
+		width: 600px;
+		font-size: 1.9rem;
+	}
+	.top-heading,
+	.bottom-heading {
+		font-size: 2.1rem;
+	}
+}
+
+@media (width >= 992px) {
+	.offer-courses {
+		width: 730px;
+		font-size: 2.1rem;
+	}
+	.top-heading,
+	.bottom-heading {
+		font-size: 2.5rem;
+	}
+}
 // HERO 3
 
 .hero3 {
@@ -713,11 +790,7 @@ nav {
 }
 
 .hero3-shadow {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
+	@include hero-shadow-mixin;
 	background-color: rgba(255, 184, 242, 0.4);
 }
 
@@ -774,11 +847,7 @@ nav {
 }
 
 .treatments-card-shadow {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
+	@include hero-shadow-mixin;
 	background-color: rgba(255, 200, 214, 0.73);
 }
 
