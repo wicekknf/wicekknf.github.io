@@ -66,8 +66,6 @@ body {
 	color: color.$main-text;
 }
 
-
-
 @mixin hero-shadow-mixin {
 	position: absolute;
 	top: 0;
@@ -120,7 +118,6 @@ body {
 }
 
 // NAV
-
 nav {
 	position: fixed;
 	top: 0;
@@ -210,7 +207,6 @@ nav {
 	border: 1px solid color.$main-text;
 }
 
-
 .big-menu-list {
 	display: none;
 }
@@ -282,7 +278,6 @@ nav {
 }
 
 // HERO1
-
 .hero1 {
 	position: relative;
 	margin-top: 70px;
@@ -300,7 +295,6 @@ nav {
 }
 
 // HERO2
-
 .hero2 {
 	margin: 5em 0;
 	position: relative;
@@ -318,7 +312,6 @@ nav {
 }
 
 // IMPORTANT!!! CODE FOR IOS (IS WORKING???)
-
 .unfix-ios-bg {
 	@supports (-webkit-touch-callout: none) {
 		background-attachment: initial !important;
@@ -415,7 +408,6 @@ nav {
 }
 
 // ABOUT ME
-
 .about-me {
 	display: flex;
 	flex-direction: column;
@@ -528,7 +520,6 @@ nav {
 }
 
 // COURSES
-
 .courses,
 .courses-cards-box,
 .course-title,
@@ -767,8 +758,8 @@ nav {
 		font-size: 2.5rem;
 	}
 }
-// HERO 3
 
+// HERO 3
 .hero3 {
 	position: relative;
 	margin-bottom: 5em;
@@ -808,7 +799,6 @@ nav {
 }
 
 // TREATMENTS
-
 .treatments {
 	display: flex;
 	align-items: center;
@@ -926,7 +916,6 @@ nav {
 }
 
 // OUR TEAM
-
 .our-team,
 .co-worker-info {
 	display: flex;
@@ -1064,7 +1053,6 @@ nav {
 }
 
 // FOOTER
-
 .footer-top,
 .fotter-adress-text,
 .footer-links,
@@ -1210,7 +1198,6 @@ nav {
 }
 
 // CONTACT
-
 .contact,
 .contact-address,
 .contact-adress-text {
@@ -1401,7 +1388,6 @@ nav {
 }
 
 //PRICES
-
 .price {
 	margin-top: 4em;
 	padding: 0 0.5em;
@@ -1537,7 +1523,6 @@ nav {
 }
 
 // FACE PRICE
-
 .face-one,
 .face-five,
 .face-eight {
@@ -1545,7 +1530,6 @@ nav {
 }
 
 //MANICURE PRICE
-
 .left {
 	display: inline-block;
 	max-width: 60%;
@@ -1556,10 +1540,7 @@ nav {
 	margin-bottom: 3.8em;
 }
 
-// LASHES
-
 // COURSES
-
 .course {
 	display: flex;
 	align-items: center;
@@ -1688,7 +1669,6 @@ nav {
 }
 
 // PORTFOLIO
-
 @media (width < 400px) {
 	.portfolio-title {
 		margin-bottom: 2em;
@@ -1758,7 +1738,6 @@ nav {
 }
 
 // 404
-
 .help {
 	min-height: 70vh;
 }
