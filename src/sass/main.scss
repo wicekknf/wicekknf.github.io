@@ -1247,6 +1247,12 @@ nav {
 	font-size: 2.8rem;
 	text-decoration: none;
 	color: black;
+	transition: color 0.3s;
+}
+
+.contact-social-icons a:hover{
+	color: #e914a9;
+	
 }
 
 .contact-map {
