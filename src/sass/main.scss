@@ -281,29 +281,17 @@ nav {
 .hero1 {
 	position: relative;
 	margin-top: 70px;
-	width: 100%;
-	height: 48vw;
-	background-image: url("../../dist/img/HeroImageLitleMedium.jpg");
-	background-size: cover;
-	background-position: center;
 }
 
-// .hero1 {
-// 	img {
-// 		width: 100%;
-// 	}
-// }
+.hero1 {
+	img {
+		width: 100%;
+	}
+}
 
 .pink-color {
 	@include hero-shadow-mixin;
 	background-color: rgba(251, 171, 191, 0.57);
-}
-
-@media (width >= 992px) {
-	.hero1 {
-		
-		height: 48vw;
-	}
 }
 
 // HERO2
