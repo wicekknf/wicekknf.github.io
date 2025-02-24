@@ -289,20 +289,6 @@ nav {
 	}
 }
 
-.hero1 {
-	height: 50vw;
-	width: 100%;
-	background-image: url("../../dist/img/HeroImageSmall.jpg");
-	background-size: contain;
-	background-position: center
-}
-
-@media (width > 992px) {
-	.hero1 {
-		background-image: url("../../dist/img/HeroImageMedium.jpg");
-	}
-}
-
 .pink-color {
 	@include hero-shadow-mixin;
 	background-color: rgba(251, 171, 191, 0.57);
