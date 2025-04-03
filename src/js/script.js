@@ -5,6 +5,9 @@ const barsX = document.querySelector(".bars-x");
 const navBottomLinks = document.querySelectorAll(".menu-list a");
 const year = document.querySelector(".year");
 
+const signatureBtn = document.querySelector(".signature-btn");
+const signaturePage = document.querySelector(".signature-for-university");
+
 const currentYear = new Date().getFullYear();
 
 year.textContent = currentYear;
@@ -41,6 +44,12 @@ const handleLinksNav = () => {
 	);
 };
 
+const hideSignature = () => {
+	signaturePage.style.display = "none";
+}
+
+
 handleLinksNav();
 burgerBtn.addEventListener("click", handleMiniNav);
 
+signatureBtn.addEventListener("click", hideSignature);
