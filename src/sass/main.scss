@@ -33,7 +33,7 @@ body {
 	z-index: 100;
 	text-align: center;
 
-	p{
+	p {
 		// text-align: center;
 		margin-top: 15%;
 		color: #fff;
@@ -41,7 +41,7 @@ body {
 		font-size: 3rem;
 	}
 
-	.signature-btn{
+	.signature-btn {
 		display: inline-block;
 		padding: 1em 2em;
 		margin: 0 auto;
@@ -50,13 +50,12 @@ body {
 		font-size: 2rem;
 		cursor: pointer;
 		background-color: #df361f;
-		transition: background-color .3s, color .3s;
+		transition: background-color 0.3s, color 0.3s;
 		color: #fff;
 	}
-	.signature-btn:hover{
+	.signature-btn:hover {
 		background-color: #3fdf1f;
 		color: black;
-
 	}
 }
 
@@ -153,6 +152,7 @@ body {
 	background-position: center;
 	background-size: cover;
 }
+
 
 // NAV
 nav {
@@ -876,9 +876,10 @@ nav {
 .nails {
 	background-image: url("../../dist/img/manicurepedicureSmall.JPG");
 }
-.eyelashes {
-	background-image: url("../../dist/img/rzęsySamll.JPG");
-}
+// DO USUNIĘCIA
+// .eyelashes {
+// 	background-image: url("../../dist/img/rzęsySamll.JPG");
+// }
 
 .treatments-card-shadow {
 	@include hero-shadow-mixin;
@@ -931,12 +932,12 @@ nav {
 
 @media (width >= 376px) {
 	.treatments-card {
-		margin-left: 3em;
-		margin-right: 3em;
+		margin-left: 5em;
+		margin-right: 5em;
 	}
 
 	.treatments-card {
-		width: 290px;
+		width: 320px;
 		height: 490px;
 	}
 
@@ -999,9 +1000,10 @@ nav {
 	background-image: url("../../dist/img/KlaudiaSmall.JPG");
 }
 
-.patrycja {
-	background-image: url("../../dist/img/Patrycja\ bratowaSmall.JPG");
-}
+// DO USUNIĘCIA
+// .patrycja {
+// 	background-image: url("../../dist/img/Patrycja\ bratowaSmall.JPG");
+// }
 
 .marita {
 	background-image: url("../../dist/img/MaritaSmall.JPG");
@@ -1095,7 +1097,6 @@ nav {
 
 // Dodawanie komentarzy!!! ON WORK!!!
 
-
 .opinions {
 	display: flex;
 	align-items: center;
@@ -1110,7 +1111,6 @@ nav {
 	text-transform: uppercase;
 	text-align: center;
 }
-
 
 .slider1,
 .slider2 {
@@ -1129,7 +1129,8 @@ nav {
 	);
 }
 
-.slider-box1, .slider-box2 {
+.slider-box1,
+.slider-box2 {
 	height: 100%;
 	width: 100%;
 	padding: 0 3em;
