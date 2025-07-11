@@ -876,10 +876,6 @@ nav {
 .nails {
 	background-image: url("../../dist/img/manicurepedicureSmall.JPG");
 }
-// DO USUNIĘCIA
-// .eyelashes {
-// 	background-image: url("../../dist/img/rzęsySamll.JPG");
-// }
 
 .treatments-card-shadow {
 	@include hero-shadow-mixin;
@@ -938,7 +934,7 @@ nav {
 
 	.treatments-card {
 		width: 320px;
-		height: 490px;
+		height: 510px;
 	}
 
 	.treatments-course-title {
@@ -1000,10 +996,6 @@ nav {
 	background-image: url("../../dist/img/KlaudiaSmall.JPG");
 }
 
-// DO USUNIĘCIA
-// .patrycja {
-// 	background-image: url("../../dist/img/Patrycja\ bratowaSmall.JPG");
-// }
 
 .marita {
 	background-image: url("../../dist/img/MaritaSmall.JPG");
@@ -1177,6 +1169,11 @@ nav {
 	color: color.$main-text;
 	padding: 0.5em;
 	transition: color 0.6s;
+}
+
+.footer-link{
+	text-decoration: none;
+	color: color.$main-text;
 }
 
 .footer-links a:focus-visible {
@@ -1488,10 +1485,6 @@ nav {
 	height: 100%;
 	background-color: color.$main-text;
 }
-
-// .strip-lashes {
-// 	left: 83%;
-// }
 
 .item {
 	display: flex;
