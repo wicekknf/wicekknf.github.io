@@ -205,8 +205,10 @@ button.hamburger {
 }
 
 .hero-content h1 span {
+    font-size: 7.5rem;
     color: var(--classic-gold);
-    font-style: italic;
+    font-family: "Imperial Script", cursive;
+    font-weight: 590;
 }
 
 .hero-content p {
