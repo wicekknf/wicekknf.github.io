@@ -353,7 +353,7 @@ button.hamburger {
 	transition:
 		opacity 2s ease-in-out,
 		transform 10s ease;
-	transform: scale(1.05);
+	transform: scale(1.1);
 }
 
 .hero-slide.active {
