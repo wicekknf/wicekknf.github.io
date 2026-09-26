@@ -169,7 +169,7 @@ button:focus {
 /* Header */
 header {
 	background-color: var(--midnight-navy);
-	padding: 20px 0;
+	padding: 5px 0;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -190,9 +190,9 @@ header {
 	color: var(--classic-gold);
 	font-size: 2.8rem;
 	text-decoration: none;
-	font-weight: 500;
-	letter-spacing: 1px;
-	font-family: "Imperial Script", cursive; 
+	/* font-weight: 700; */
+	letter-spacing: 2px;
+	font-family: "Imperial Script", cursive;
 }
 
 .nav-menu ul {
@@ -389,6 +389,7 @@ button.hamburger {
 	font-size: 4.5rem;
 	color: var(--classic-gold);
 	font-family: "Imperial Script", cursive;
+	letter-spacing: 2px;
 	font-weight: 590;
 }
 
