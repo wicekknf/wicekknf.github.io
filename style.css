@@ -25,6 +25,13 @@ body {
 	overflow-x: hidden;
 }
 
+/* GLOBALNY RESET OBRAZKÓW (zabezpiecza przed "wylewaniem" na urządzenia mobilne) */
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
 h1,
 h2,
 h3,
@@ -84,23 +91,13 @@ h6,
 
 /* ANIMACJE GLOBALNE */
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 
 @keyframes slideUp {
-	from {
-		opacity: 0;
-		transform: translateY(40px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+	from { opacity: 0; transform: translateY(40px); }
+	to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in {
@@ -116,15 +113,25 @@ h6,
 .reveal {
 	opacity: 0;
 	transform: translateY(40px);
-	transition:
-		opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-		transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+	transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.active {
 	opacity: 1;
 	transform: translateY(0);
 }
+
+/* KLASY POMOCNICZE (OPÓŹNIENIA ANIMACJI) */
+.delay-100 { animation-delay: 0.1s; transition-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; transition-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; transition-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; transition-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; transition-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; transition-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; transition-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; transition-delay: 0.8s; }
+.delay-900 { animation-delay: 0.9s; transition-delay: 0.9s; }
+.mt-30 { margin-top: 30px; }
 
 /* Przyciski i linki */
 .btn {
@@ -176,9 +183,7 @@ header {
 	top: 0;
 	z-index: 1000;
 	box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
-	transition:
-		padding 0.3s ease,
-		background-color 0.3s ease;
+	transition: padding 0.3s ease, background-color 0.3s ease;
 }
 
 .header-container {
@@ -191,7 +196,6 @@ header {
 	color: var(--classic-gold);
 	font-size: 2.8rem;
 	text-decoration: none;
-	/* font-weight: 700; */
 	letter-spacing: 2px;
 	font-family: "Imperial Script", cursive;
 }
@@ -245,13 +249,10 @@ button.hamburger {
 	width: 30px;
 	height: 2px;
 	background-color: var(--pure-white);
-	transition:
-		transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55),
-		opacity 0.3s;
+	transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.3s;
 	display: block;
 }
 
-/* Rozwiązanie problemu z headerem przy 1060px: Włączenie menu mobilnego wcześniej */
 @media (max-width: 1060px) {
 	.nav-menu {
 		position: fixed;
@@ -268,9 +269,7 @@ button.hamburger {
 		z-index: 1000;
 	}
 
-	.nav-menu.active {
-		right: 0;
-	}
+	.nav-menu.active { right: 0; }
 
 	.nav-menu ul {
 		flex-direction: column;
@@ -281,9 +280,7 @@ button.hamburger {
 	.nav-menu li {
 		opacity: 0;
 		transform: translateY(20px);
-		transition:
-			opacity 0.3s ease,
-			transform 0.3s ease;
+		transition: opacity 0.3s ease, transform 0.3s ease;
 	}
 
 	.nav-menu.active li {
@@ -291,35 +288,9 @@ button.hamburger {
 		transform: translateY(0);
 	}
 
-	.nav-menu.active li:nth-child(1) {
-		transition-delay: 0.2s;
-	}
-	.nav-menu.active li:nth-child(2) {
-		transition-delay: 0.3s;
-	}
-	.nav-menu.active li:nth-child(3) {
-		transition-delay: 0.4s;
-	}
-	.nav-menu.active li:nth-child(4) {
-		transition-delay: 0.5s;
-	}
-	.nav-menu.active li:nth-child(5) {
-		transition-delay: 0.6s;
-	}
-	.nav-menu.active li:nth-child(6) {
-		transition-delay: 0.7s;
-	}
-
-	.nav-menu a {
-		font-size: 1.5rem;
-	}
-
-	.header-btn {
-		display: none;
-	}
-	button.hamburger {
-		display: flex;
-	}
+	.nav-menu a { font-size: 1.5rem; }
+	.header-btn { display: none; }
+	button.hamburger { display: flex; }
 }
 
 /* Hero ze Sliderem */
@@ -351,27 +322,15 @@ button.hamburger {
 	background-position: center;
 	background-repeat: no-repeat;
 	opacity: 0;
-	transition:
-		opacity 2s ease-in-out,
-		transform 10s ease;
+	transition: opacity 2s ease-in-out, transform 10s ease;
 	transform: scale(1.1);
 }
 
-.bg-one {
-	background-image: url("jpg/1.jpg");
-}
-.bg-two {
-	background-image: url("jpg/2.jpg");
-}
-.bg-three {
-	background-image: url("jpg/3.jpg");
-}
-.bg-four {
-	background-image: url("jpg/4.jpg");
-}
-.bg-five {
-	background-image: url("jpg/5.jpg");
-}
+.bg-one { background-image: url("jpg/1.jpg"); }
+.bg-two { background-image: url("jpg/2.jpg"); }
+.bg-three { background-image: url("jpg/3.jpg"); }
+.bg-four { background-image: url("jpg/4.jpg"); }
+.bg-five { background-image: url("jpg/5.jpg"); }
 
 .hero-slide.active {
 	opacity: 1;
@@ -431,7 +390,7 @@ button.hamburger {
 	line-height: 1.8;
 }
 
-/* --- ZMIENIONA SEKCJA WESELA (Split Layout) --- */
+/* WESELA */
 .wedding-content-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -448,24 +407,24 @@ button.hamburger {
 	text-align: left;
 }
 
-.wedding-heading {
-	color: var(--classic-gold);
-	font-family: "Playfair Display", serif;
-	font-size: 2rem;
-	margin-bottom: 20px;
+.wedding-title {
+    color: var(--classic-gold);
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-.wedding-description {
-	margin-bottom: 20px;
-	font-size: 1.1rem;
-	line-height: 1.8;
-	color: #444;
+.wedding-desc {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
 }
 
-.wedding-list-title {
-	font-weight: 600;
-	margin-bottom: 15px;
-	color: var(--midnight-navy);
+.wedding-list-header {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--midnight-navy);
 }
 
 .styled-list {
@@ -488,20 +447,19 @@ button.hamburger {
 	font-size: 1.1rem;
 }
 
-.btn-wedding {
-	margin-top: 30px;
-}
-
 .wedding-image-side {
 	position: relative;
 	height: 100%;
 	min-height: 400px;
 }
 
-.bg-wedding {
-	background-image: url("jpg/7.jpg");
-	background-size: cover;
-	background-position: center;
+.feature-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .image-accent {
@@ -521,20 +479,19 @@ button.hamburger {
 	}
 	.wedding-image-side {
 		min-height: 300px;
-		order: -1;
+		order: -1; 
 	}
 	.wedding-text-side {
 		padding: 40px 20px;
 	}
 }
 
-
-/* --- ZMIENIONA SEKCJA IMPREZY (Wizualne Karty) --- */
-.imprezy-subtitle {
-	max-width: 800px;
-	margin: 0 auto 50px auto;
-	color: #555;
-	text-align: center;
+/* IMPREZY (Wizualne Karty) */
+.section-subtitle {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    color: #555;
+    text-align: center;
 }
 
 .offer-grid-visual {
@@ -551,6 +508,8 @@ button.hamburger {
 	transition: transform 0.4s ease, box-shadow 0.4s ease;
 	display: flex;
 	flex-direction: column;
+	min-width: 0; /* Zabezpieczenie przed psuciem CSS Grid */
+	width: 100%;
 }
 
 .visual-card:hover {
@@ -559,6 +518,7 @@ button.hamburger {
 }
 
 .visual-card-img-wrapper {
+	width: 100%;
 	height: 220px;
 	overflow: hidden;
 	position: relative;
@@ -574,35 +534,16 @@ button.hamburger {
 	background-color: var(--classic-gold);
 }
 
-/* Ustawienia teł dla kart Imprezy */
-.bg-card-one {
-	background-image: url("jpg/8.jpg");
-	background-size: cover;
-	background-position: center;
+.visual-card-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	transition: transform 0.6s ease;
 }
 
-.bg-card-two {
-	background-image: url("jpg/9.jpg");
-	background-size: cover;
-	background-position: center;
-	transition: transform 0.6s ease;
-}
-
-.bg-card-three {
-	background-image: url("jpg/5.jpg");
-	background-size: cover;
-	background-position: center;
-	transition: transform 0.6s ease;
-}
-
-/* Zastosowanie efektu zoom na elemencie tła */
-.visual-card:hover .bg-card-one,
-.visual-card:hover .bg-card-two,
-.visual-card:hover .bg-card-three {
+.visual-card:hover .visual-card-img {
 	transform: scale(1.1);
 }
-
 
 .visual-card-content {
 	padding: 35px 25px;
@@ -644,9 +585,7 @@ button.hamburger {
 	height: 250px;
 	object-fit: cover;
 	border-radius: 4px;
-	transition:
-		transform 0.4s ease,
-		filter 0.4s ease;
+	transition: transform 0.4s ease, filter 0.4s ease;
 	cursor: pointer;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 	background-color: #eee;
@@ -678,9 +617,7 @@ button.hamburger {
 	align-items: center;
 	opacity: 0;
 	visibility: hidden;
-	transition:
-		opacity 0.4s ease,
-		visibility 0.4s ease;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .lightbox.active {
@@ -710,9 +647,7 @@ button.hamburger {
 	font-weight: 300;
 	cursor: pointer;
 	z-index: 10000;
-	transition:
-		color 0.3s ease,
-		transform 0.3s ease;
+	transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .lightbox-close:hover {
@@ -788,9 +723,7 @@ button.hamburger {
 	padding: 0 25px;
 	overflow: hidden;
 	opacity: 0;
-	transition:
-		padding 0.4s ease,
-		opacity 0.3s ease;
+	transition: padding 0.4s ease, opacity 0.3s ease;
 }
 
 .faq-item.active .faq-answer {
@@ -798,7 +731,27 @@ button.hamburger {
 	opacity: 1;
 }
 
-/* Footer */
+/* Footer & Mapa */
+.map-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: filter 0.3s ease;
+}
+
+.map-container iframe:hover {
+	filter: brightness(1.05);
+}
+
 .footer-custom-padding {
 	padding-bottom: 20px;
 }
