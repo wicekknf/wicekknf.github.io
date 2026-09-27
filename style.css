@@ -10,6 +10,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -356,20 +357,20 @@ button.hamburger {
 	transform: scale(1.1);
 }
 
-.one {
-    background-image: url('jpg/1.jpg');
+.bg-one {
+	background-image: url("jpg/1.jpg");
 }
-.two {
-    background-image: url('jpg/2.jpg');
+.bg-two {
+	background-image: url("jpg/2.jpg");
 }
-.three {
-    background-image: url('jpg/3.jpg');
+.bg-three {
+	background-image: url("jpg/3.jpg");
 }
-.four {
-    background-image: url('jpg/4.jpg');
+.bg-four {
+	background-image: url("jpg/4.jpg");
 }
-.five {
-    background-image: url('jpg/5.jpg');
+.bg-five {
+	background-image: url("jpg/5.jpg");
 }
 
 .hero-slide.active {
