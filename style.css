@@ -448,6 +448,26 @@ button.hamburger {
 	text-align: left;
 }
 
+.wedding-heading {
+	color: var(--classic-gold);
+	font-family: "Playfair Display", serif;
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+
+.wedding-description {
+	margin-bottom: 20px;
+	font-size: 1.1rem;
+	line-height: 1.8;
+	color: #444;
+}
+
+.wedding-list-title {
+	font-weight: 600;
+	margin-bottom: 15px;
+	color: var(--midnight-navy);
+}
+
 .styled-list {
 	list-style: none;
 }
@@ -468,19 +488,20 @@ button.hamburger {
 	font-size: 1.1rem;
 }
 
+.btn-wedding {
+	margin-top: 30px;
+}
+
 .wedding-image-side {
 	position: relative;
 	height: 100%;
 	min-height: 400px;
 }
 
-.feature-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+.bg-wedding {
+	background-image: url("jpg/7.jpg");
+	background-size: cover;
+	background-position: center;
 }
 
 .image-accent {
@@ -500,7 +521,7 @@ button.hamburger {
 	}
 	.wedding-image-side {
 		min-height: 300px;
-		order: -1; /* Obrazek nad tekstem na mobile */
+		order: -1;
 	}
 	.wedding-text-side {
 		padding: 40px 20px;
@@ -509,6 +530,13 @@ button.hamburger {
 
 
 /* --- ZMIENIONA SEKCJA IMPREZY (Wizualne Karty) --- */
+.imprezy-subtitle {
+	max-width: 800px;
+	margin: 0 auto 50px auto;
+	color: #555;
+	text-align: center;
+}
+
 .offer-grid-visual {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -546,16 +574,35 @@ button.hamburger {
 	background-color: var(--classic-gold);
 }
 
-.visual-card-img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+/* Ustawienia teł dla kart Imprezy */
+.bg-card-one {
+	background-image: url("jpg/8.jpg");
+	background-size: cover;
+	background-position: center;
 	transition: transform 0.6s ease;
 }
 
-.visual-card:hover .visual-card-img {
+.bg-card-two {
+	background-image: url("jpg/9.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: transform 0.6s ease;
+}
+
+.bg-card-three {
+	background-image: url("jpg/5.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: transform 0.6s ease;
+}
+
+/* Zastosowanie efektu zoom na elemencie tła */
+.visual-card:hover .bg-card-one,
+.visual-card:hover .bg-card-two,
+.visual-card:hover .bg-card-three {
 	transform: scale(1.1);
 }
+
 
 .visual-card-content {
 	padding: 35px 25px;
@@ -795,15 +842,6 @@ button.hamburger {
 	margin-bottom: 25px;
 	color: #d1d5db;
 	font-weight: 300;
-}
-
-/* Map Container */
-.map-container iframe {
-	width: 100%;
-	transition: filter 0.3s ease;
-}
-.map-container iframe:hover {
-	filter: brightness(1.05);
 }
 
 .footer-bottom {
