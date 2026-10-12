@@ -326,11 +326,14 @@ button.hamburger {
 	transform: scale(1.1);
 }
 
-.bg-one { background-image: url("jpg/1.jpg"); }
-.bg-two { background-image: url("jpg/2.jpg"); }
-.bg-three { background-image: url("jpg/3.jpg"); }
-.bg-four { background-image: url("jpg/4.jpg"); }
-.bg-five { background-image: url("jpg/5.jpg"); }
+.bg-zero { background-image: url("jpg/glowna\ ale\ jako\ pierwsze.jpg"); }
+.bg-one { background-image: url("jpg/glowna.jpg"); }
+.bg-two { background-image: url("jpg/glowna1.jpg"); }
+.bg-three { background-image: url("jpg/glowna2.jpg"); }
+.bg-four { background-image: url("jpg/glowna4.jpg"); }
+.bg-five { background-image: url("jpg/glowna5.jpg"); }
+.bg-six { background-image: url("jpg/glowna6.jpg"); }
+.bg-seven { background-image: url("jpg/glowna7.jpg"); }
 
 .hero-slide.active {
 	opacity: 1;
