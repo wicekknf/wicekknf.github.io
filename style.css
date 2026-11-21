@@ -83,6 +83,12 @@ ol {
 	list-style: none;
 }
 
+a,
+button {
+	-webkit-tap-highlight-color: transparent;
+	touch-action: manipulation;
+}
+
 a {
 	color: inherit;
 }
