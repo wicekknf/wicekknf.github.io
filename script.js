@@ -108,13 +108,18 @@
 	window.addEventListener("resize", requestScrollFrame, { passive: true });
 	onScrollFrame();
 
-	// Przycisk „do góry” – po przewinięciu przenieś fokus na początek strony
-	if (toTop) {
-		toTop.addEventListener("click", () => {
-			const logo = document.querySelector(".logo-link");
-			if (logo) setTimeout(() => logo.focus({ preventScroll: true }), reduceMotion ? 0 : 600);
+	// Linki powrotu na górę (logo, Home, przycisk „do góry”)
+	document.querySelectorAll('a[href="#top"]').forEach((link) => {
+		link.addEventListener("click", (e) => {
+			e.preventDefault();
+			if (isMenuOpen()) setMenu(false);
+			window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+			if (link === toTop) {
+				const logo = document.querySelector(".logo-link");
+				if (logo) setTimeout(() => logo.focus({ preventScroll: true }), reduceMotion ? 0 : 600);
+			}
 		});
-	}
+	});
 
 	/* ---------- Animacje pojawiania się (WCAG 2.3.3) ---------- */
 	const revealEls = document.querySelectorAll("[data-reveal]");

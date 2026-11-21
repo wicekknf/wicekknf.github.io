@@ -750,13 +750,28 @@ main:focus {
 }
 
 .spec-grid {
-	display: grid;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 1.75rem;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 }
 
 .spec-grid > li {
 	display: flex;
+	flex: 0 1 100%;
+	min-width: 0;
+}
+
+@media (min-width: 680px) {
+	.spec-grid > li {
+		flex: 0 1 calc((100% - 1.75rem) / 2);
+	}
+}
+
+@media (min-width: 1024px) {
+	.spec-grid > li {
+		flex: 0 1 calc((100% - 3.5rem) / 3);
+	}
 }
 
 .spec-card {
