@@ -1347,10 +1347,12 @@ main:focus {
 }
 
 .map {
+	display: grid;
 	min-height: 340px;
 	border-radius: var(--radius);
 	overflow: hidden;
-	background: var(--cream-200);
+	background: var(--cream);
+	border: 1px solid var(--cream-200);
 	box-shadow: var(--shadow);
 }
 
@@ -1360,6 +1362,73 @@ main:focus {
 	height: 100%;
 	min-height: 340px;
 	border: 0;
+}
+
+.map-consent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.85rem;
+	padding: 2rem 1.75rem;
+	text-align: center;
+	background:
+		radial-gradient(circle at 50% 0%, rgba(212, 175, 97, 0.16), transparent 65%),
+		var(--cream);
+}
+
+.map-consent-icon {
+	display: grid;
+	place-items: center;
+	width: 54px;
+	height: 54px;
+	border-radius: 50%;
+	background: var(--navy-700);
+	color: var(--gold-300);
+}
+
+.map-consent-title {
+	font-family: var(--font-serif);
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: var(--ink);
+}
+
+.map-consent-desc {
+	max-width: 44ch;
+	font-size: 0.92rem;
+	line-height: 1.55;
+	color: var(--muted);
+}
+
+.map-consent-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0.85rem 1.25rem;
+	margin-top: 0.35rem;
+}
+
+.btn-sm {
+	min-height: 44px;
+	padding: 0.65rem 1.4rem;
+	font-size: 0.95rem;
+}
+
+.map-external-link {
+	font-size: 0.92rem;
+	font-weight: 600;
+	color: var(--ink);
+	text-decoration: underline;
+	text-decoration-color: var(--gold-400);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 4px;
+	transition: color 0.3s;
+}
+
+.map-external-link:hover {
+	color: var(--gold-600);
 }
 
 @media (min-width: 900px) {
@@ -1400,11 +1469,108 @@ main:focus {
 	font-size: 0.95rem;
 }
 
-.footer-bottom .year:not(:empty)::before {
+.footer-bottom .year:not(:empty)::before,
+.footer-bottom .footer-link::before {
 	content: "•";
 	content: "•" / "";
 	margin-right: 0.75rem;
 	color: var(--gold-400);
+}
+
+.footer-link {
+	color: var(--on-dark-muted);
+	text-decoration: underline;
+	text-decoration-color: rgba(212, 175, 97, 0.55);
+	text-underline-offset: 4px;
+	transition: color 0.3s;
+}
+
+.footer-link:hover {
+	color: var(--gold-300);
+}
+
+/* ---------- Podstrona prawna (Polityka prywatności) ---------- */
+.back-link {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.55rem 1.1rem;
+	border: 1px solid rgba(230, 201, 138, 0.45);
+	border-radius: 999px;
+	color: var(--on-dark);
+	font-size: 0.95rem;
+	font-weight: 500;
+	text-decoration: none;
+	transition:
+		border-color 0.3s,
+		color 0.3s;
+}
+
+.back-link:hover {
+	border-color: var(--gold-400);
+	color: var(--gold-300);
+}
+
+.legal-main {
+	padding: calc(var(--header-h) + 3rem) 0 clamp(4rem, 3rem + 4vw, 6rem);
+}
+
+.legal-card {
+	max-width: 860px;
+	margin-inline: auto;
+	padding: clamp(2rem, 1.5rem + 3vw, 4rem);
+	background: var(--white);
+	border: 1px solid var(--cream-200);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow);
+}
+
+.legal-header {
+	padding-bottom: 1.75rem;
+	margin-bottom: 2rem;
+	border-bottom: 2px solid var(--cream-200);
+}
+
+.legal-card h1 {
+	font-size: clamp(1.85rem, 1.4rem + 1.8vw, 2.6rem);
+	margin-bottom: 0.75rem;
+}
+
+.legal-meta {
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
+.legal-card section + section {
+	margin-top: 2.25rem;
+}
+
+.legal-card h2 {
+	font-size: 1.35rem;
+	margin-bottom: 0.75rem;
+}
+
+.legal-card p + p,
+.legal-card p + ul,
+.legal-card ul + p {
+	margin-top: 0.85rem;
+}
+
+.legal-card ul {
+	padding-left: 1.35rem;
+	display: grid;
+	gap: 0.5rem;
+}
+
+.legal-card a {
+	color: var(--ink);
+	font-weight: 600;
+	text-decoration: underline;
+	text-decoration-color: var(--gold-400);
+	text-underline-offset: 4px;
+}
+
+.legal-card a:hover {
+	color: var(--gold-600);
 }
 
 /* ---------- Przycisk „do góry” ---------- */

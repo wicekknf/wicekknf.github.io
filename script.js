@@ -185,6 +185,23 @@
 		sectionMap.forEach((_, section) => navObserver.observe(section));
 	}
 
+	/* ---------- Mapa Google ładowana po zgodzie (RODO – two-click) ---------- */
+	const mapTrigger = document.querySelector("[data-map-trigger]");
+	if (mapTrigger) {
+		mapTrigger.addEventListener("click", () => {
+			const box = mapTrigger.closest("[data-map-src]");
+			if (!box) return;
+			const iframe = document.createElement("iframe");
+			iframe.src = box.dataset.mapSrc;
+			iframe.title = box.dataset.mapTitle || "Mapa dojazdu";
+			iframe.allowFullscreen = true;
+			iframe.loading = "lazy";
+			iframe.referrerPolicy = "no-referrer-when-downgrade";
+			box.replaceChildren(iframe);
+			iframe.focus();
+		});
+	}
+
 	/* ---------- Efekt 3D kart specjalizacji (tylko mysz) ---------- */
 	const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 

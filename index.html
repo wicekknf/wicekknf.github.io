@@ -55,12 +55,7 @@
 			imagesizes="100vw"
 			fetchpriority="high"
 		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Playfair+Display:ital,wght@0,500..700;1,500..700&display=swap"
-			rel="stylesheet"
-		/>
+		<link rel="stylesheet" href="./dist/fonts/fonts.css" />
 		<link rel="stylesheet" href="./style.css" />
 		<script src="./script.js" defer></script>
 
@@ -113,7 +108,10 @@
 		</script>
 	</head>
 	<body id="top">
-		<!-- Sprite ikon SVG (na bazie Tabler Icons, licencja MIT) -->
+		<!--
+			Sprite ikon SVG na bazie Tabler Icons (https://github.com/tabler/tabler-icons)
+			Copyright (c) 2020-2026 Paweł Kuna | Licencja MIT – pełny tekst w pliku LICENSES.txt
+		-->
 		<svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
 			<defs>
 				<symbol id="i-users" viewBox="0 0 24 24"><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></symbol>
@@ -574,14 +572,30 @@
 							</div>
 						</address>
 
-						<div class="map" data-reveal="right">
-							<iframe
-								title="Mapa dojazdu do Kancelarii Radcy Prawnego Katarzyny Gruntmeyer w Aleksandrowie Łódzkim"
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2466.2230393030277!2d19.330536976489725!3d51.82035597188612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471bb4f25fef5095%3A0x7ec387ed18e797f5!2sPiotrkowska%20116%2C%2095-069%20Aleksandr%C3%B3w%20%C5%81%C3%B3dzki!5e0!3m2!1spl!2spl!4v1757701737540!5m2!1spl!2spl"
-								allowfullscreen=""
-								loading="lazy"
-								referrerpolicy="no-referrer-when-downgrade"
-							></iframe>
+						<div
+							class="map"
+							data-reveal="right"
+							data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2466.2230393030277!2d19.330536976489725!3d51.82035597188612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471bb4f25fef5095%3A0x7ec387ed18e797f5!2sPiotrkowska%20116%2C%2095-069%20Aleksandr%C3%B3w%20%C5%81%C3%B3dzki!5e0!3m2!1spl!2spl!4v1757701737540!5m2!1spl!2spl"
+							data-map-title="Mapa dojazdu do Kancelarii Radcy Prawnego Katarzyny Gruntmeyer w Aleksandrowie Łódzkim"
+						>
+							<div class="map-consent">
+								<span class="map-consent-icon" aria-hidden="true"><svg class="icon"><use href="#i-pin" /></svg></span>
+								<p class="map-consent-title">Mapa dojazdu (Google Maps)</p>
+								<p class="map-consent-desc">
+									Ze względu na ochronę prywatności (RODO) mapa nie ładuje się automatycznie. Kliknięcie poniżej połączy
+									się z serwerami Google (przekazanie adresu IP i pliki cookies Google).
+								</p>
+								<div class="map-consent-actions">
+									<button type="button" class="btn btn-primary btn-sm" data-map-trigger>Załaduj mapę Google</button>
+									<a
+										href="https://www.google.com/maps/search/?api=1&amp;query=Piotrkowska+116,+95-070+Aleksandr%C3%B3w+%C5%81%C3%B3dzki"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="map-external-link"
+										>Otwórz w Mapach Google</a
+									>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -604,6 +618,7 @@
 				<div class="footer-bottom">
 					<p class="place-bottom">Aleksandrów Łódzki</p>
 					<p class="year"></p>
+					<a href="./polityka-prywatnosci.html" class="footer-link">Polityka prywatności</a>
 				</div>
 			</div>
 		</footer>
