@@ -1,33 +1,13 @@
 <!doctype html>
 <html lang="pl">
 	<head>
-		<!-- Icons: Tabler Icons MIT License https://github.com/tabler/tabler-icons -->
 		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-		/>
-		<link
-			rel="preconnect"
-			href="https://fonts.googleapis.com"
-		/>
-		<link
-			rel="preconnect"
-			href="https://fonts.gstatic.com"
-			crossorigin
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-			rel="stylesheet"
-		/>
-		<title>
-			Radca prawny Aleksandrów Łódzki – Katarzyna Gruntmeyer | Prawo rodzinne z
-			empatią
-		</title>
-		<link
-			rel="stylesheet"
-			href="./style.css"
-		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script>
+			document.documentElement.classList.add("js");
+		</script>
+
+		<title>Radca prawny Aleksandrów Łódzki – Katarzyna Gruntmeyer | Prawo rodzinne z empatią</title>
 		<meta
 			name="description"
 			content="Radca prawny Aleksandrów Łódzki – pomoc w sprawach rodzinnych, cywilnych i gospodarczych. Jak mogę dziś wesprzeć Twoją sytuację prawną?"
@@ -36,363 +16,568 @@
 			name="keywords"
 			content="radca prawny, kancelaria radcy prawnego, pomoc prawna, porady prawne, prawo rodzinne, prawo cywilne, prawo gospodarcze, Aleksandrów Łódzki, Sieradz, rozwód, alimenty, opieka nad dzieckiem"
 		/>
+		<meta name="author" content="Katarzyna Gruntmeyer" />
+		<meta name="robots" content="index, follow, max-image-preview:large" />
+		<meta name="theme-color" content="#0f1b2d" />
+		<meta name="geo.region" content="PL-10" />
+		<meta name="geo.placename" content="Aleksandrów Łódzki" />
+		<meta name="geo.position" content="51.82036;19.33054" />
+		<meta name="ICBM" content="51.82036, 19.33054" />
+
+		<!--
+			Po podpięciu domeny uzupełnij adres (https://twojadomena.pl) i odkomentuj:
+			<link rel="canonical" href="https://twojadomena.pl/" />
+			<meta property="og:url" content="https://twojadomena.pl/" />
+			<meta property="og:image" content="https://twojadomena.pl/dist/img/hero_1280.jpg" />
+		-->
+
+		<!-- Open Graph / Social media -->
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="pl_PL" />
+		<meta property="og:site_name" content="Kancelaria Radcy Prawnego Katarzyna Gruntmeyer" />
+		<meta property="og:title" content="Radca prawny Aleksandrów Łódzki – Katarzyna Gruntmeyer | Prawo rodzinne z empatią" />
+		<meta
+			property="og:description"
+			content="Radca prawny Aleksandrów Łódzki – pomoc w sprawach rodzinnych, cywilnych i gospodarczych. Jak mogę dziś wesprzeć Twoją sytuację prawną?"
+		/>
+		<meta property="og:image:alt" content="Statua Temidy z wagą sprawiedliwości" />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<link rel="icon" href="dist/img/fav_icon.png" type="image/png" sizes="32x32" />
+		<link rel="apple-touch-icon" href="dist/img/fav_icon.png" />
+
+		<!-- Wydajność: wcześniejsze pobranie obrazu LCP i fontów -->
 		<link
+			rel="preload"
+			as="image"
+			href="dist/img/hero_1280.jpg"
+			imagesrcset="dist/img/hero_768.jpg 768w, dist/img/hero_1280.jpg 1280w, dist/img/hero_1920.jpg 1920w"
+			imagesizes="100vw"
+			fetchpriority="high"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Playfair+Display:ital,wght@0,500..700;1,500..700&display=swap"
 			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
 		/>
-		<link
-			rel="icon"
-			href="dist/img/fav_icon.png"
-			type="image/png"
-			sizes="32x32"
-		/>
+		<link rel="stylesheet" href="./style.css" />
+		<script src="./script.js" defer></script>
+
+		<!-- Dane strukturalne (Schema.org) – lokalne SEO -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "LegalService",
+				"name": "Kancelaria Radcy Prawnego Katarzyna Gruntmeyer",
+				"description": "Radca prawny Aleksandrów Łódzki – pomoc w sprawach rodzinnych, cywilnych i gospodarczych.",
+				"telephone": "+48661464248",
+				"email": "k.gruntmeyer.radcaprawny@gmail.com",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Piotrkowska 116",
+					"postalCode": "95-070",
+					"addressLocality": "Aleksandrów Łódzki",
+					"addressRegion": "łódzkie",
+					"addressCountry": "PL"
+				},
+				"geo": {
+					"@type": "GeoCoordinates",
+					"latitude": 51.82036,
+					"longitude": 19.33054
+				},
+				"areaServed": [
+					{ "@type": "City", "name": "Aleksandrów Łódzki" },
+					{ "@type": "City", "name": "Sieradz" }
+				],
+				"knowsAbout": [
+					"Prawo cywilne",
+					"Prawo rodzinne i opiekuńcze",
+					"Prawo gospodarcze",
+					"Prawo administracyjne"
+				],
+				"employee": {
+					"@type": "Person",
+					"name": "Katarzyna Gruntmeyer",
+					"jobTitle": "Radca prawny",
+					"alumniOf": {
+						"@type": "CollegeOrUniversity",
+						"name": "Uniwersytet Łódzki"
+					},
+					"memberOf": {
+						"@type": "Organization",
+						"name": "Okręgowa Izba Radców Prawnych w Łodzi"
+					}
+				}
+			}
+		</script>
 	</head>
 	<body>
-		<a
-			href="#main-content"
-			class="skip-link"
-			>Przejdź do głównej treści</a
-		>
+		<!-- Sprite ikon SVG (na bazie Tabler Icons, licencja MIT) -->
+		<svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
+			<defs>
+				<symbol id="i-users" viewBox="0 0 24 24"><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></symbol>
+				<symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M12 12l0 .01" /><path d="M3 13a20 20 0 0 0 18 0" /></symbol>
+				<symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 21l18 0" /><path d="M3 10l18 0" /><path d="M5 6l7 -3l7 3" /><path d="M4 10l0 11" /><path d="M20 10l0 11" /><path d="M8 14l0 3" /><path d="M12 14l0 3" /><path d="M16 14l0 3" /></symbol>
+				<symbol id="i-messages" viewBox="0 0 24 24"><path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" /><path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" /></symbol>
+				<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></symbol>
+				<symbol id="i-scale" viewBox="0 0 24 24"><path d="M7 20l10 0" /><path d="M6 6l6 -1l6 1" /><path d="M12 3l0 17" /><path d="M9 12l-3 -6l-3 6a3 3 0 0 0 6 0" /><path d="M21 12l-3 -6l-3 6a3 3 0 0 0 6 0" /></symbol>
+				<symbol id="i-writing" viewBox="0 0 24 24"><path d="M20 17v-12c0 -1.121 -.879 -2 -2 -2s-2 .879 -2 2v12l2 2l2 -2z" /><path d="M16 7h4" /><path d="M18 19h-13a2 2 0 1 1 0 -4h4a2 2 0 1 0 0 -4h-3" /></symbol>
+				<symbol id="i-search" viewBox="0 0 24 24"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></symbol>
+				<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" /><path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" /><path d="M9.7 17l4.6 0" /></symbol>
+				<symbol id="i-pin" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></symbol>
+				<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></symbol>
+				<symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></symbol>
+				<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></symbol>
+				<symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 5l0 14" /><path d="M18 11l-6 -6" /><path d="M6 11l6 -6" /></symbol>
+			</defs>
+		</svg>
 
-		<nav aria-label="Menu główne">
-			<div class="logo">
-				<a
-					href="#"
-					class="logo-link"
-					aria-label="Strona główna – Kancelaria Katarzyna Gruntmeyer"
-				></a>
-			</div>
-			<button
-				type="button"
-				class="burger-btn"
-				id="burger"
-				aria-label="Otwórz menu nawigacyjne"
-				aria-expanded="false"
-			>
-				<span class="line1"></span>
-				<span class="line2"></span>
-			</button>
+		<a href="#main-content" class="skip-link">Przejdź do głównej treści</a>
 
-			<div class="menu background-for-menu">
-				<a href="#">Home</a>
-				<a href="#h2-spec">Zakres</a>
-				<a href="#h2-service">Usługi</a>
-				<a href="#about-me">O mnie</a>
-				<a href="#contact">Kontakt</a>
-			</div>
+		<div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-			<div class="big-menu">
-				<a href="#">Home</a>
-				<a href="#h2-spec">Zakres</a>
-				<a href="#h2-service">Usługi</a>
-				<a href="#about-me">O mnie</a>
-				<a href="#contact">Kontakt</a>
-			</div>
-		</nav>
+		<header class="site-header" id="top">
+			<div class="container header-inner">
+				<a href="#top" class="logo-link">
+					<img
+						src="dist/img/logo%20bia%C5%82e%20bez%20t%C5%82a.png"
+						alt="Strona główna – Kancelaria Katarzyna Gruntmeyer"
+						width="766"
+						height="589"
+					/>
+				</a>
 
-		<header class="hero">
-			<div class="hero-img"></div>
-			<div class="hero-gradient"></div>
-			<div class="hero-text">
-				<h1>Kiedy życie się komplikuje, prawo nie musi być labiryntem</h1>
-				<p class="hero-subtitle">
-					Pomogę Ci przejść przez najtrudniejszy moment – z empatią i
-					merytorycznym wsparciem.
-				</p>
-				<a
-					href="#address"
-					class="contact-btn open-sans"
-					>Skontaktuj się</a
-				>
+				<nav class="main-nav" aria-label="Menu główne">
+					<button
+						type="button"
+						class="burger-btn"
+						id="burger"
+						aria-label="Otwórz menu nawigacyjne"
+						aria-expanded="false"
+						aria-controls="primary-menu"
+					>
+						<span class="burger-line" aria-hidden="true"></span>
+						<span class="burger-line" aria-hidden="true"></span>
+						<span class="burger-line" aria-hidden="true"></span>
+					</button>
+
+					<ul class="menu" id="primary-menu">
+						<li><a href="#top">Home</a></li>
+						<li><a href="#h2-spec">Zakres</a></li>
+						<li><a href="#h2-service">Usługi</a></li>
+						<li><a href="#about-me">O mnie</a></li>
+						<li><a href="#contact">Kontakt</a></li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 
-		<main id="main-content">
-			<section class="short-info wrapper">
-				<img
-					class="first-img"
-					src="dist/img/first_no_bg.png"
-					alt="Radca prawny Katarzyna Gruntmeyer w eleganckim garniturze i białej koszuli"
-				/>
-				<div class="short-info-text">
-					<h2 class="short-info-h3">Staram się mówić prostym językiem.</h2>
-					<p style="margin-top: 1em">
-						Tłumaczę wszystko tak, jakbym rozmawiała z przyjaciółką przy kawie.
-						Bo prawo jest dla ludzi – nie na odwrót.
-					</p>
-				</div>
-			</section>
-
-			<section class="spec">
-				<h2 id="h2-spec">Zakres specjalizacji</h2>
-				<div class="cards">
-					<div class="card one visible">
-						<p class="spec-text">
-							Prawo Cywilne<br /><span>W tym prawo rodzinne i opiekuńcze</span>
-							<span class="card-subtitle"
-								>Gdy potrzebujesz jasności w najtrudniejszych chwilach</span
-							>
-						</p>
-						<div class="card-shadow"></div>
-					</div>
-
-					<div class="card two visible">
-						<p class="spec-text">
-							Prawo Gospodarcze
-							<span class="card-subtitle"
-								>Gdy Twoja firma potrzebuje pewności prawnej</span
-							>
-						</p>
-						<div class="card-shadow"></div>
-					</div>
-
-					<div class="card three visible">
-						<p class="spec-text">
-							Prawo Administracyjne
-							<span class="card-subtitle"
-								>Gdy urząd mówi "nie", a Ty wiesz, że powinno być "tak"</span
-							>
-						</p>
-						<div class="card-shadow"></div>
-					</div>
-				</div>
-			</section>
-
-			<section class="services-section wrapper">
-				<div class="services wrapper">
-					<h2
-						class="title"
-						id="h2-service"
-					>
-						Oferuję następujące usługi prawne
-					</h2>
-
-					<div class="s-card visible">
-						<div class="s-card-text-box">
-							<p>
-								<strong>Porozmawiajmy – bez presji, bez zegara</strong><br />
-								Spotkajmy się w kancelarii albo online. Bez korporacyjnej gry w
-								"czas to pieniądz". Najpierw zrozumiem Twoją sytuację. Następnie
-								razem znajdziemy rozwiązanie.
-							</p>
-						</div>
-						<img
-							src="dist/img/service1_medium.jpg"
-							alt="Dwie osoby omawiające dokumenty prawne przy laptopie"
-							class="s-card-img"
-						/>
-					</div>
-
-					<div class="s-card visible">
-						<div class="s-card-text-box">
-							<p>
-								<strong>Sporządzanie dokumentów prawnych</strong><br />
-								Przygotowuję pozwy, wnioski, pisma procesowe oraz środki
-								odwoławcze
-							</p>
-						</div>
-						<img
-							src="dist/img/service2_u.jpg"
-							alt="Osoba podpisująca dokumenty leżące na drewnianym stole"
-							class="s-card-img"
-						/>
-					</div>
-
-					<div class="s-card visible">
-						<div class="s-card-text-box">
-							<p>
-								<strong>Reprezentacja przed sądami i organami</strong><br />
-								Reprezentuję Klientów przed sądami powszechnymi, organami
-								administracji publicznej oraz organami egzekucyjnymi
-							</p>
-						</div>
-						<img
-							src="dist/img/service3_medium.jpg"
-							alt="Drewniany młotek sędziowski oraz waga sprawiedliwości"
-							class="s-card-img"
-						/>
-					</div>
-
-					<div class="s-card visible">
-						<div class="s-card-text-box">
-							<p>
-								<strong>Zanim podpiszesz – upewnij się, że to bezpieczne</strong
-								><br />
-								Pomagam w negocjacjach, przygotowuję umowy i sprawdzam te, które
-								dostałeś. Bo jeden zły zapis może wiele kosztować.
-							</p>
-						</div>
-						<img
-							src="dist/img/service4_medium.jpg"
-							alt="Osoby analizujące zapisy umowy przy biurku"
-							class="s-card-img"
-						/>
-					</div>
-
-					<div class="s-card visible">
-						<div class="s-card-text-box">
-							<p class="too-big">
-								<strong>Potrzebujesz pewności?</strong><br />
-								Przygotowuję analizy prawne, które odpowiadają na Twoje
-								konkretne pytania w zrozumiałym języku.
-							</p>
-						</div>
-						<img
-							src="dist/img/service5_medium.jpg"
-							alt="Dłoń trzymająca długopis podczas podpisywania umowy"
-							class="s-card-img"
-						/>
-					</div>
-
-					<div class="s-card visible">
-						<div class="s-card-text-box">
-							<p>
-								<strong>Masz nietypowy problem? Tym lepiej</strong><br />
-								Każda sprawa jest inna. Jeśli potrzebujesz czegoś, czego nie ma
-								na liście – zapytaj. Znajdziemy rozwiązanie.
-							</p>
-						</div>
-						<img
-							src="dist/img/service6_u.jpg"
-							alt="Książki prawnicze z zakładkami oraz otwarty notes z długopisem"
-							class="s-card-img"
-						/>
-					</div>
-				</div>
-			</section>
-
-			<section class="about-me-section wrapper">
-				<h2
-					class="h2-about-me"
-					id="about-me"
-				>
-					O mnie
-				</h2>
-
-				<div class="about-me-first-part visible">
-					<p class="about-text">
-						Jestem radcą prawnym wpisaną na listę Okręgowej Izby Radców Prawnych
-						w Łodzi (nr wpisu ŁD-2958). Ukończyłam studia prawnicze na Wydziale
-						Prawa i Administracji Uniwersytetu Łódzkiego w 2019 roku, a w latach
-						2021–2023 odbyłam aplikację radcowską, zakończoną zdanym egzaminem
-						radcowskim w 2024 roku. Specjalizuję się w prawie rodzinnym i
-						opiekuńczym, które od początku mojej drogi zawodowej jest w centrum
-						moich zainteresowań. Doświadczenie w tej dziedzinie zdobywałam już
-						podczas studiów, współpracując z doświadczonymi prawnikami.
-					</p>
+		<main id="main-content" tabindex="-1">
+			<!-- HERO -->
+			<section class="hero on-dark" aria-labelledby="hero-title">
+				<div class="hero-media">
 					<img
-						src="dist/img/about_me.jpg"
-						alt="Radca prawny Katarzyna Gruntmeyer siedząca przy biurku z otwartym kodeksem"
+						src="dist/img/hero_1280.jpg"
+						srcset="dist/img/hero_768.jpg 768w, dist/img/hero_1280.jpg 1280w, dist/img/hero_1920.jpg 1920w"
+						sizes="100vw"
+						alt=""
+						width="1280"
+						height="853"
+						fetchpriority="high"
+						decoding="async"
 					/>
 				</div>
-				<div class="about-me-second-part visible">
-					<img
-						src="dist/img/about_me_2.jpg"
-						alt="Radca prawny Katarzyna Gruntmeyer w todze radcowskiej z niebieskim żabotem"
-					/>
-					<p class="about-text">
-						W pracy stawiam na empatię, delikatność i indywidualne podejście,
-						ponieważ sprawy rodzinne wymagają szczególnej troski o emocje i
-						dobro Klientów, zwłaszcza osób małoletnich. Do każdej sprawy
-						podchodzę z pełnym zaangażowaniem, dbając o to, by moi Klienci czuli
-						się zaopiekowani i wspierani. Kluczowe wartości w mojej pracy to
-						dialog, szczerość i dążenie do najlepszych rozwiązań. Prywatnie
-						pasjonuję się motoryzacją, uwielbiam zwierzęta i rozwijam swoje
-						umiejętności kulinarne. Zapraszam do zapoznania się z ofertą mojej
-						kancelarii i kontaktu w celu omówienia Państwa potrzeb prawnych.
-					</p>
+				<div class="hero-overlay" aria-hidden="true"></div>
+
+				<div class="container hero-inner">
+					<div class="hero-content">
+						<h1 id="hero-title" class="hero-anim" style="--d: 0.15s">
+							Kiedy życie się komplikuje, prawo nie musi być <span class="accent">labiryntem</span>
+						</h1>
+						<p class="hero-subtitle hero-anim" style="--d: 0.35s">
+							Pomogę Ci przejść przez najtrudniejszy moment – z empatią i merytorycznym wsparciem.
+						</p>
+						<div class="hero-anim" style="--d: 0.55s">
+							<a href="#address" class="btn btn-primary">
+								Skontaktuj się
+								<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right" /></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="scroll-cue" aria-hidden="true"><span></span></div>
+			</section>
+
+			<!-- KRÓTKIE INFO -->
+			<section class="section intro" aria-labelledby="intro-title">
+				<div class="container intro-grid">
+					<figure class="portrait" data-reveal="left">
+						<img
+							src="dist/img/first_no_bg.png"
+							alt="Radca prawny Katarzyna Gruntmeyer w eleganckim garniturze i białej koszuli"
+							width="829"
+							height="1078"
+							loading="lazy"
+							decoding="async"
+						/>
+					</figure>
+					<div class="intro-text" data-reveal="right">
+						<h2 id="intro-title" class="intro-title">Staram się mówić prostym językiem.</h2>
+						<p>
+							Tłumaczę wszystko tak, jakbym rozmawiała z przyjaciółką przy kawie. Bo prawo jest dla ludzi – nie na
+							odwrót.
+						</p>
+					</div>
 				</div>
 			</section>
 
-			<div class="hero2 wrapper">
-				<div class="hero2-img"></div>
-				<div class="hero2-shadow"></div>
-				<p class="hero2-text">
-					Ius est ars boni et aequi - Prawo jest sztuką czynienia tego, co dobre
-					i słuszne.
-				</p>
-			</div>
+			<!-- ZAKRES SPECJALIZACJI -->
+			<section class="section spec" aria-labelledby="h2-spec">
+				<div class="container">
+					<header class="section-head">
+						<h2 id="h2-spec" class="section-title" data-reveal>Zakres specjalizacji</h2>
+					</header>
 
-			<section class="contact wrapper">
-				<h2 id="contact">Zacznijmy rozmowę</h2>
-
-				<div class="contact-box">
-					<div class="contact-shadow"></div>
-					<p class="contact-text visible">
-						<strong
-							style="display: block; margin-bottom: 0.5em; font-size: 1.9rem"
-						>
-							Nie musisz jechać do wielkiego miasta, żeby dostać dobrą pomoc
-							prawną.
-						</strong>
-						Działam w Aleksandrowie Łódzkim i Sieradzu, ale jeśli sprawa wymaga
-						– dojadę tam, gdzie trzeba.<br /><br />
-						<strong>Jak to działa?</strong><br />
-						1. Zadzwoń lub napisz maila<br />
-						2. Umówimy spotkanie (w kancelarii lub online)<br />
-						3. Porozmawiamy – bez presji, bez ukrytych kosztów<br />
-						4. Zdecydujesz, czy chcesz ze mną pracować
-					</p>
-					<img
-						src="dist/img/contact_img.jpg"
-						alt="Statua Temidy trzymająca wagę sprawiedliwości na tle miasta"
-						class="contact-img visible"
-					/>
+					<ul class="spec-grid" role="list">
+						<li data-reveal style="--delay: 0s">
+							<article class="spec-card" data-tilt>
+								<img
+									src="dist/img/prawo%20rodzinne%20small.jpg"
+									srcset="dist/img/prawo%20rodzinne%20small.jpg 640w, dist/img/prawo%20rodzinne%20medium.jpg 1280w"
+									sizes="(min-width: 900px) 33vw, 100vw"
+									alt=""
+									width="640"
+									height="336"
+									loading="lazy"
+									decoding="async"
+								/>
+								<span class="spec-icon" aria-hidden="true"><svg class="icon"><use href="#i-users" /></svg></span>
+								<h3>Prawo Cywilne</h3>
+								<p class="spec-scope">W tym prawo rodzinne i opiekuńcze</p>
+								<p class="spec-subtitle">Gdy potrzebujesz jasności w najtrudniejszych chwilach</p>
+							</article>
+						</li>
+						<li data-reveal style="--delay: 0.12s">
+							<article class="spec-card" data-tilt>
+								<img
+									src="dist/img/prawo_gospodarcze_small.jpg"
+									srcset="dist/img/prawo_gospodarcze_small.jpg 640w, dist/img/prawo_gospodarcze_medium.jpg 1280w"
+									sizes="(min-width: 900px) 33vw, 100vw"
+									alt=""
+									width="640"
+									height="426"
+									loading="lazy"
+									decoding="async"
+								/>
+								<span class="spec-icon" aria-hidden="true"><svg class="icon"><use href="#i-briefcase" /></svg></span>
+								<h3>Prawo Gospodarcze</h3>
+								<p class="spec-subtitle">Gdy Twoja firma potrzebuje pewności prawnej</p>
+							</article>
+						</li>
+						<li data-reveal style="--delay: 0.24s">
+							<article class="spec-card" data-tilt>
+								<img
+									src="dist/img/prawo%20administracyjne%20small.jpg"
+									srcset="
+										dist/img/prawo%20administracyjne%20small.jpg   640w,
+										dist/img/prawo%20administracyjne%20medium.jpg 1280w
+									"
+									sizes="(min-width: 900px) 33vw, 100vw"
+									alt=""
+									width="640"
+									height="426"
+									loading="lazy"
+									decoding="async"
+								/>
+								<span class="spec-icon" aria-hidden="true"><svg class="icon"><use href="#i-bank" /></svg></span>
+								<h3>Prawo Administracyjne</h3>
+								<p class="spec-subtitle">Gdy urząd mówi "nie", a Ty wiesz, że powinno być "tak"</p>
+							</article>
+						</li>
+					</ul>
 				</div>
+			</section>
 
-				<div
-					class="address wrapper"
-					id="address"
-				>
-					<div class="address-shadow">
-						<div class="address-words">
-							<div class="place">
-								<div
-									class="icon"
-									aria-hidden="true"
-								>
-									<i class="ti ti-map-pin-filled"></i>
-								</div>
-								<div class="address-text">
-									<p>Piotrkowska 116, 95-070 Aleksandrów Łódzki</p>
-								</div>
-							</div>
+			<!-- USŁUGI -->
+			<section class="section services on-dark" aria-labelledby="h2-service">
+				<div class="container">
+					<header class="section-head">
+						<h2 id="h2-service" class="section-title" data-reveal>Oferuję następujące usługi prawne</h2>
+					</header>
 
-							<div class="phone">
-								<div
-									class="icon"
-									aria-hidden="true"
-								>
-									<i class="ti ti-phone-filled"></i>
+					<ul class="services-grid" role="list">
+						<li data-reveal style="--delay: 0s">
+							<article class="service-card">
+								<div class="service-media">
+									<img
+										src="dist/img/service1_small.jpg"
+										srcset="dist/img/service1_small.jpg 640w, dist/img/service1_medium.jpg 1280w"
+										sizes="(min-width: 1100px) 380px, (min-width: 700px) 50vw, 100vw"
+										alt="Dwie osoby omawiające dokumenty prawne przy laptopie"
+										width="640"
+										height="427"
+										loading="lazy"
+										decoding="async"
+									/>
 								</div>
-								<a
-									class="special-text"
-									href="tel:+48661464248"
-									>661-464-248</a
-								>
-							</div>
+								<div class="service-body">
+									<span class="service-icon" aria-hidden="true"><svg class="icon"><use href="#i-messages" /></svg></span>
+									<h3>Porozmawiajmy – bez presji, bez zegara</h3>
+									<p>
+										Spotkajmy się w kancelarii albo online. Bez korporacyjnej gry w "czas to pieniądz". Najpierw
+										zrozumiem Twoją sytuację. Następnie razem znajdziemy rozwiązanie.
+									</p>
+								</div>
+							</article>
+						</li>
+						<li data-reveal style="--delay: 0.1s">
+							<article class="service-card">
+								<div class="service-media">
+									<img
+										src="dist/img/service2_small.jpg"
+										srcset="dist/img/service2_small.jpg 640w, dist/img/service2_medium.jpg 1280w"
+										sizes="(min-width: 1100px) 380px, (min-width: 700px) 50vw, 100vw"
+										alt="Osoba podpisująca dokumenty leżące na drewnianym stole"
+										width="640"
+										height="427"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+								<div class="service-body">
+									<span class="service-icon" aria-hidden="true"><svg class="icon"><use href="#i-file" /></svg></span>
+									<h3>Sporządzanie dokumentów prawnych</h3>
+									<p>Przygotowuję pozwy, wnioski, pisma procesowe oraz środki odwoławcze</p>
+								</div>
+							</article>
+						</li>
+						<li data-reveal style="--delay: 0.2s">
+							<article class="service-card">
+								<div class="service-media">
+									<img
+										src="dist/img/service3_small.jpg"
+										srcset="dist/img/service3_small.jpg 640w, dist/img/service3_medium.jpg 1280w"
+										sizes="(min-width: 1100px) 380px, (min-width: 700px) 50vw, 100vw"
+										alt="Drewniany młotek sędziowski oraz waga sprawiedliwości"
+										width="640"
+										height="480"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+								<div class="service-body">
+									<span class="service-icon" aria-hidden="true"><svg class="icon"><use href="#i-scale" /></svg></span>
+									<h3>Reprezentacja przed sądami i organami</h3>
+									<p>
+										Reprezentuję Klientów przed sądami powszechnymi, organami administracji publicznej oraz organami
+										egzekucyjnymi
+									</p>
+								</div>
+							</article>
+						</li>
+						<li data-reveal style="--delay: 0s">
+							<article class="service-card">
+								<div class="service-media">
+									<img
+										src="dist/img/service4_small.jpg"
+										srcset="dist/img/service4_small.jpg 640w, dist/img/service4_medium.jpg 1920w"
+										sizes="(min-width: 1100px) 380px, (min-width: 700px) 50vw, 100vw"
+										alt="Osoby analizujące zapisy umowy przy biurku"
+										width="640"
+										height="427"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+								<div class="service-body">
+									<span class="service-icon" aria-hidden="true"><svg class="icon"><use href="#i-writing" /></svg></span>
+									<h3>Zanim podpiszesz – upewnij się, że to bezpieczne</h3>
+									<p>
+										Pomagam w negocjacjach, przygotowuję umowy i sprawdzam te, które dostałeś. Bo jeden zły zapis
+										może wiele kosztować.
+									</p>
+								</div>
+							</article>
+						</li>
+						<li data-reveal style="--delay: 0.1s">
+							<article class="service-card">
+								<div class="service-media">
+									<img
+										src="dist/img/service5_small.jpg"
+										srcset="dist/img/service5_small.jpg 640w, dist/img/service5_medium.jpg 1280w"
+										sizes="(min-width: 1100px) 380px, (min-width: 700px) 50vw, 100vw"
+										alt="Dłoń trzymająca długopis podczas podpisywania umowy"
+										width="640"
+										height="480"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+								<div class="service-body">
+									<span class="service-icon" aria-hidden="true"><svg class="icon"><use href="#i-search" /></svg></span>
+									<h3>Potrzebujesz pewności?</h3>
+									<p>
+										Przygotowuję analizy prawne, które odpowiadają na Twoje konkretne pytania w zrozumiałym języku.
+									</p>
+								</div>
+							</article>
+						</li>
+						<li data-reveal style="--delay: 0.2s">
+							<article class="service-card">
+								<div class="service-media">
+									<img
+										src="dist/img/service6_small.jpg"
+										srcset="dist/img/service6_small.jpg 640w, dist/img/service6_medium.jpg 1280w"
+										sizes="(min-width: 1100px) 380px, (min-width: 700px) 50vw, 100vw"
+										alt="Książki prawnicze z zakładkami oraz otwarty notes z długopisem"
+										width="640"
+										height="360"
+										loading="lazy"
+										decoding="async"
+									/>
+								</div>
+								<div class="service-body">
+									<span class="service-icon" aria-hidden="true"><svg class="icon"><use href="#i-bulb" /></svg></span>
+									<h3>Masz nietypowy problem? Tym lepiej</h3>
+									<p>
+										Każda sprawa jest inna. Jeśli potrzebujesz czegoś, czego nie ma na liście – zapytaj. Znajdziemy
+										rozwiązanie.
+									</p>
+								</div>
+							</article>
+						</li>
+					</ul>
+				</div>
+			</section>
 
-							<div class="mail">
-								<div
-									class="icon"
-									aria-hidden="true"
-								>
-									<i class="ti ti-mail-filled"></i>
-								</div>
-								<a
-									class="special-text"
-									href="mailto:k.gruntmeyer.radcaprawny@gmail.com"
-								>
-									k.gruntmeyer.radcaprawny@gmail.com
-								</a>
-							</div>
+			<!-- O MNIE -->
+			<section class="section about" aria-labelledby="about-me">
+				<div class="container">
+					<header class="section-head">
+						<h2 id="about-me" class="section-title" data-reveal>O mnie</h2>
+					</header>
+
+					<div class="about-row about-row--first">
+						<figure class="about-figure" data-reveal="right">
+							<img
+								src="dist/img/about_me_small.jpg"
+								srcset="dist/img/about_me_small.jpg 600w, dist/img/about_me.jpg 1066w"
+								sizes="(min-width: 900px) 420px, 90vw"
+								alt="Radca prawny Katarzyna Gruntmeyer siedząca przy biurku z otwartym kodeksem"
+								width="600"
+								height="608"
+								loading="lazy"
+								decoding="async"
+							/>
+						</figure>
+						<p class="about-text" data-reveal="left">
+							Jestem radcą prawnym wpisaną na listę Okręgowej Izby Radców Prawnych w Łodzi (nr wpisu ŁD-2958).
+							Ukończyłam studia prawnicze na Wydziale Prawa i Administracji Uniwersytetu Łódzkiego w 2019 roku, a w
+							latach 2021–2023 odbyłam aplikację radcowską, zakończoną zdanym egzaminem radcowskim w 2024 roku.
+							Specjalizuję się w prawie rodzinnym i opiekuńczym, które od początku mojej drogi zawodowej jest w centrum
+							moich zainteresowań. Doświadczenie w tej dziedzinie zdobywałam już podczas studiów, współpracując z
+							doświadczonymi prawnikami.
+						</p>
+					</div>
+
+					<div class="about-row about-row--second">
+						<figure class="about-figure" data-reveal="left">
+							<img
+								src="dist/img/about_me_2_small.jpg"
+								srcset="dist/img/about_me_2_small.jpg 600w, dist/img/about_me_2.jpg 770w"
+								sizes="(min-width: 900px) 420px, 90vw"
+								alt="Radca prawny Katarzyna Gruntmeyer w todze radcowskiej z niebieskim żabotem"
+								width="600"
+								height="820"
+								loading="lazy"
+								decoding="async"
+							/>
+						</figure>
+						<p class="about-text" data-reveal="right">
+							W pracy stawiam na empatię, delikatność i indywidualne podejście, ponieważ sprawy rodzinne wymagają
+							szczególnej troski o emocje i dobro Klientów, zwłaszcza osób małoletnich. Do każdej sprawy podchodzę z
+							pełnym zaangażowaniem, dbając o to, by moi Klienci czuli się zaopiekowani i wspierani. Kluczowe wartości
+							w mojej pracy to dialog, szczerość i dążenie do najlepszych rozwiązań. Prywatnie pasjonuję się
+							motoryzacją, uwielbiam zwierzęta i rozwijam swoje umiejętności kulinarne. Zapraszam do zapoznania się z
+							ofertą mojej kancelarii i kontaktu w celu omówienia Państwa potrzeb prawnych.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- CYTAT -->
+			<figure class="quote on-dark">
+				<div class="quote-bg" aria-hidden="true"></div>
+				<div class="container">
+					<blockquote data-reveal="zoom">
+						<p>
+							<span lang="la" class="quote-latin">Ius est ars boni et aequi</span> - Prawo jest sztuką czynienia tego,
+							co dobre i słuszne.
+						</p>
+					</blockquote>
+				</div>
+			</figure>
+
+			<!-- KONTAKT -->
+			<section class="section contact" aria-labelledby="contact">
+				<div class="container">
+					<header class="section-head">
+						<h2 id="contact" class="section-title" data-reveal>Zacznijmy rozmowę</h2>
+					</header>
+
+					<div class="contact-card on-dark" data-reveal>
+						<div class="contact-content">
+							<p class="contact-lead">
+								<strong>Nie musisz jechać do wielkiego miasta, żeby dostać dobrą pomoc prawną.</strong>
+							</p>
+							<p>
+								Działam w Aleksandrowie Łódzkim i Sieradzu, ale jeśli sprawa wymaga – dojadę tam, gdzie trzeba.
+							</p>
+
+							<h3 class="steps-title">Jak to działa?</h3>
+							<ol class="steps">
+								<li data-reveal style="--delay: 0.1s">Zadzwoń lub napisz maila</li>
+								<li data-reveal style="--delay: 0.2s">Umówimy spotkanie (w kancelarii lub online)</li>
+								<li data-reveal style="--delay: 0.3s">Porozmawiamy – bez presji, bez ukrytych kosztów</li>
+								<li data-reveal style="--delay: 0.4s">Zdecydujesz, czy chcesz ze mną pracować</li>
+							</ol>
 						</div>
+						<div class="contact-media">
+							<img
+								src="dist/img/contact_img_small.jpg"
+								srcset="dist/img/contact_img_small.jpg 600w, dist/img/contact_img.jpg 853w"
+								sizes="(min-width: 900px) 460px, 100vw"
+								alt="Statua Temidy trzymająca wagę sprawiedliwości na tle miasta"
+								width="600"
+								height="900"
+								loading="lazy"
+								decoding="async"
+							/>
+						</div>
+					</div>
 
-						<div class="address-map">
+					<div class="address-grid" id="address">
+						<address class="info-list" data-reveal="left">
+							<div class="info-item">
+								<span class="info-icon" aria-hidden="true"><svg class="icon"><use href="#i-pin" /></svg></span>
+								<p>Piotrkowska 116, 95-070 Aleksandrów Łódzki</p>
+							</div>
+							<div class="info-item">
+								<span class="info-icon" aria-hidden="true"><svg class="icon"><use href="#i-phone" /></svg></span>
+								<a href="tel:+48661464248">661-464-248</a>
+							</div>
+							<div class="info-item">
+								<span class="info-icon" aria-hidden="true"><svg class="icon"><use href="#i-mail" /></svg></span>
+								<a href="mailto:k.gruntmeyer.radcaprawny@gmail.com">k.gruntmeyer.radcaprawny@gmail.com</a>
+							</div>
+						</address>
+
+						<div class="map" data-reveal="right">
 							<iframe
 								title="Mapa dojazdu do Kancelarii Radcy Prawnego Katarzyny Gruntmeyer w Aleksandrowie Łódzkim"
 								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2466.2230393030277!2d19.330536976489725!3d51.82035597188612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471bb4f25fef5095%3A0x7ec387ed18e797f5!2sPiotrkowska%20116%2C%2095-069%20Aleksandr%C3%B3w%20%C5%81%C3%B3dzki!5e0!3m2!1spl!2spl!4v1757701737540!5m2!1spl!2spl"
-								style="border: 0; width: 100%; height: 100%"
 								allowfullscreen=""
 								loading="lazy"
 								referrerpolicy="no-referrer-when-downgrade"
@@ -403,15 +588,28 @@
 			</section>
 		</main>
 
-		<footer>
-			<div class="footer-logo"></div>
-			<div class="footer-line"></div>
-			<div class="footer-bottom">
-				<p class="place-bottom">Aleksandrów Łódzki</p>
-				<p class="year"></p>
+		<footer class="site-footer on-dark">
+			<div class="container">
+				<div class="footer-logo">
+					<img
+						src="dist/img/logo%20bia%C5%82e%20bez%20t%C5%82a.png"
+						alt="Logo Kancelarii Radcy Prawnego Katarzyna Gruntmeyer"
+						width="766"
+						height="589"
+						loading="lazy"
+						decoding="async"
+					/>
+				</div>
+				<div class="footer-line" aria-hidden="true"></div>
+				<div class="footer-bottom">
+					<p class="place-bottom">Aleksandrów Łódzki</p>
+					<p class="year"></p>
+				</div>
 			</div>
 		</footer>
 
-		<script src="./script.js"></script>
+		<a href="#top" class="to-top" aria-label="Wróć na górę strony">
+			<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up" /></svg>
+		</a>
 	</body>
 </html>
